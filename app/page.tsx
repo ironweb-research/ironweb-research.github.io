@@ -13,7 +13,7 @@ export default function Home() {
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Our Roots &rarr;</h3>
-            <p>How did this company comes about.</p>
+            <p>This is how our company comes about.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className="card">
