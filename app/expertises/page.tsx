@@ -1,4 +1,4 @@
-export const dynamic = 'force-static'
+export const dynamic = 'force-static';
 export default function ExpertisesPage() {
   return (
     <div className="container">
