@@ -1,5 +1,7 @@
 const globby = require("globby");
 
+export const revalidate = 30;
+
 function addPage(page: string) {
   const path = page
     .replace("app", "")
@@ -20,5 +22,5 @@ export default async function sitemap() {
     lastModified: new Date().toISOString(),
   }));
 
-  return [...routes];
+  return [...routes]; // spread operator on [routes]
 }
