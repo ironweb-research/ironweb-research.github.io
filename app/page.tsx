@@ -32,8 +32,8 @@ export default function Home() {
 
           <a
             href="https://ironweb-research.github.io/we_are/"
-            target="_blank"
-            rel="noopener noreferrer"
+            // target="_blank"
+            // rel="noopener noreferrer"
             className="card"
           >
             <h3>Our Blog &rarr;</h3>
