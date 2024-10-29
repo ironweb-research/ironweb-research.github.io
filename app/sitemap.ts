@@ -1,6 +1,6 @@
 const globby = require("globby");
 
-export const revalidate = 30;
+export const revalidate = 3600; // hourly revalidation
 
 function addPage(page: string) {
   const path = page

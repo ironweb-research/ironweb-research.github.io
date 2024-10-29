@@ -31,14 +31,14 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://ironweb-research.github.io/we_are/"
             target="_blank"
             rel="noopener noreferrer"
             className="card"
           >
             <h3>Our Blog &rarr;</h3>
             <p>
-              Read about fields of expertise, views and research topics.
+              Who we are defines our fields of expertise, views and research topics.
             </p>
           </a>
         </div>
