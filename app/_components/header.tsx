@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { REPO_NAME } from "../lib/constants";
 
 const Header = () => {
   return (
@@ -8,7 +7,7 @@ const Header = () => {
       <div className="flex items-center">
         <Link href="/" className="flex items-center">
           <Image
-            src={`https://ironweb-research.github.io/${REPO_NAME}/logo/Ironweb_go_back.gif`}
+            src={`https://ironweb-research.github.io/logo/Ironweb_go_back.gif`}
             alt="Logo"
             width={400} // Adjust the width as needed
             height={400} // Adjust the height as needed
