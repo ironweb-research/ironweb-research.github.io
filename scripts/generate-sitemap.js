@@ -4,6 +4,8 @@ const globby = require("globby");
 function addPage(page) {
   const path = page.replace("pages", "").replace(".js", "").replace(".mdx", "");
   const route = path === "/index" ? "" : path;
+  console.log(`gen_sitemap____route = path.                  >>>>>>>>>>>>>>>>: ${path}`)
+  console.log(`gen_sitemap____process.env.WEBSITE_URL_route. >>>>>>>>>>>>>>>>: ${process.env.WEBSITE_URL}${route}`)
 
   return `  <url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
