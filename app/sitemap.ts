@@ -19,6 +19,7 @@ export default async function sitemap() {
   const pages = await globby([
     "app/**/*{.js,jsx,ts,tsx,.mdx}",
     "!app/_*.js",
+    "!app/*.{js,jsx,ts,tsx}",
     "!app/{sitemap,layout}.{js,jsx,ts,tsx}",
     "!app/api",
     "!app/_components/*{.js,jsx,ts,tsx,.mdx}",
