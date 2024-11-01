@@ -18,9 +18,8 @@ function addPage(page: string) {
 export default async function sitemap() {
   const pages = await globby([
     "app/**/*.{js,jsx,ts,tsx,md,mdx}",
-    "!app/_*.{js,jsx,ts,tsx,md,mdx}",
     "!app/*.{js,jsx,ts,tsx,md,mdx}",
-    "!app/{_components,api,layout,sitemap}.{js,jsx,ts,tsx,md,mdx}",
+    "!app/{_components,lib}/*.{js,jsx,ts,tsx,md,mdx}",
     "!app/api",
   ]);
   const routes = pages.map((page: string) => ({
