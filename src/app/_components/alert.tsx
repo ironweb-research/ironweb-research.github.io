@@ -62,7 +62,7 @@ const Alert = ({ preview }: Props) => {
               <div
                 ref={marqueeRef}
                 className="inline-block animate-marquee"
-              >                We have migrated from www.ironweb-research.tech to here. We appreciate the support given by{" "}
+              > We have migrated from www.ironweb-research.tech to here. We appreciate the support given by{" "}
                 <a
                   href={`https://vercel.com/`}
                   className="underline hover:text-blue-600 duration-200 transition-colors"
