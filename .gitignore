@@ -23,6 +23,9 @@
 .DS_Store
 *.pem
 
+# logo
+/public/assets/logo/ironweb.bmp
+
 # debug
 npm-debug.log*
 yarn-debug.log*
