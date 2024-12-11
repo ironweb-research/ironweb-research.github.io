@@ -15,7 +15,7 @@ export function Intro() {
         />
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        Research | Develop | Solutioning 
+        Research | Develop | Solution  
       </h4>
     </section>
   );
