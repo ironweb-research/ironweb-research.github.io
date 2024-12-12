@@ -74,7 +74,7 @@
         gap: 20px;
     }
     .flip-card-front h2 {
-        font-size: 2vw; /* Increase font size on larger screens */
+        font-size: 2rem; /* Increase font size on larger screens */
     }
     .flip-card-back h2 {
         text-wrap: pretty; 
@@ -91,7 +91,7 @@
         gap: 20px;
     }
     .flip-card-front h2 {
-        font-size: 1.5vw; /* Increase font size on larger screens */
+        font-size: 2rem; /* Increase font size on larger screens */
     }
     .flip-card-back h2 {
         text-wrap: pretty; 
