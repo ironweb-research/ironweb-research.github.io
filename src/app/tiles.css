@@ -39,7 +39,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
     margin: 1rem;
     flex-basis: 45%;
     padding: 0.5rem;
@@ -55,22 +54,47 @@
 .flip-card-back {
     background-color: #2980b9;
     color: white;
-    transform: rotateY(180deg);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
     margin: 1rem;
     flex-basis: 45%;
     padding: 0.5rem;
     border: 2px solid #eaeaea;
     border-radius: 10px;
     border-color: #001e43;
+    transform: rotateY(180deg);
+
 }
+/* For larger screens */
 @media (min-width: 600px) {
     .box_container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+    .flip-card-front h2 {
+        font-size: 2vw; /* Increase font size on larger screens */
+    }
+    .flip-card-back h2 {
+        text-wrap: pretty; 
+        font-size: 0.6rem; 
+
+    }
+
+}
+/* For smaller screens */
+@media (max-width: 599px) {
+    .box_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .flip-card-front h2 {
+        font-size: 1.5vw; /* Increase font size on larger screens */
+    }
+    .flip-card-back h2 {
+        text-wrap: pretty; 
+        font-size: 1rem; /* Reduce font size on small screens */
     }
 }
