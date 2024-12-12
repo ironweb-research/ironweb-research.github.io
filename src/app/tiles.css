@@ -95,6 +95,6 @@
     }
     .flip-card-back h2 {
         text-wrap: pretty; 
-        font-size: 0.5rem; 
+        font-size: 1rem; 
     }
 }
