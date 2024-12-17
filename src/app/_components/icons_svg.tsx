@@ -11,17 +11,25 @@ interface IconProps {
     strokeColour?: string;
 }
   
-export const DayTimeIcon = () => (
-  <svg viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round">
-    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="stroke-yellow-300"></path>
-    <path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" className="stroke-yellow-200"></path>
+export const SystemModeIcon: React.FC<IconProps> = ({ width = 2, fillColour="#1e1b4b", strokeColour = "#6b7280" }) => {
+  const [hoverOn, setHovered] = React.useState(false);
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      xmlns="http://www.w3.org/2000/svg"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth={width} 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+    <rect x="4" y="4" width="16" height="12" rx="2" stroke={strokeColour} fill={hoverOn ? fillColour : "none"}></rect>
+    <rect x="6" y="18" width="12" height="2" rx="1" stroke={strokeColour}></rect>
   </svg>
 )
+}
 
 export const DarkModeIcon: React.FC<IconProps> = ({ width = 1, strokeColour = "white" }) => {
   const [hoverOn, setHovered] = React.useState(false);
@@ -65,8 +73,31 @@ export const DarkModeIcon: React.FC<IconProps> = ({ width = 1, strokeColour = "w
   )
 }
 
+export const LightModeIcon: React.FC<IconProps> = ({ width = 2, strokeColour = "#FFBE03" }) => {
+
+  return (
+    <svg 
+      viewBox="0 0 24 24" 
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none" 
+      
+      strokeWidth={width} 
+      strokeLinecap="round" 
+      strokeLinejoin="round">
+
+      <path d="M12 2v3M18.66 5.344l-1.656 1.656M22.005 12.004h-3M18.66 18.664l-1.656-1.656M12 22.01V19M5.34 18.664l1.67-1.67M2.995 12.004h3M5 5l1.67 1.67"  stroke={strokeColour}></path>
+      <circle cx="12" cy="12" r="3" stroke={strokeColour} />
+      <circle cx="12" cy="12" r="2.5" stroke="#FFCB03" />
+      <circle cx="12" cy="12" r="2" stroke="#FFD303" />
+      <circle cx="12" cy="12" r="1.5" stroke="#FFDB03" />
+      <circle cx="12" cy="12" r="1" stroke="#FFE403" />
+      <circle cx="12" cy="12" r="0.5" fill="#FFF003" />
+    </svg>
+  )
+}
 
 export default {
-  DayTimeIcon,
+  SystemModeIcon,
   DarkModeIcon,
+  LightModeIcon,
 };
