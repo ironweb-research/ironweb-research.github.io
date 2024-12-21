@@ -1,9 +1,10 @@
+import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
 import { IRONWEB_ANI_GIF_URL } from "@/lib/constants";
+import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
 
 import "./globals.css";
 
@@ -30,39 +31,40 @@ export default function RootLayout({
       <head>
         <link
           rel="apple-touch-icon"
-          sizes="180x200"
-          href="/assets/logo/apple-touch-icon.png"
+          sizes="180x180"
+          href="/img/logo/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
-          sizes="32x35"
-          href="/assets/logo/ironweb_icon_32x35.png"
+          sizes="32x32"
+          href="/img/logo/favicon_32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
-          sizes="16x17"
-          href="/assets/logo/ironweb_icon_16x17.png"
+          sizes="16x16"
+          href="/img/logo/favicon_16x16.png"
         />
-        <link rel="manifest" href="/assets/logo/site.webmanifest" />
+        <link rel="manifest" href="/img/logo/site.webmanifest" />
         <link
           rel="mask-icon"
-          href="/assets/logo/safari-pinned-tab.svg"
-          color="#4c4c4c"
+          href="/img/logo/safari-pinned-tab.svg"
+          color="#000000"
         />
-        <link rel="shortcut icon" href="/assets/logo/ironweb_icon.ico" />
+        <link rel="icon" href="/assets/logo/favicon.ico" type="image/x-icon"/>
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"
-          content="/assets/logo/browserconfig.xml"
+          content="/img/logo/browserconfig.xml"
         />
-        <meta name="theme-color" content="#000" />
+        <meta name="theme-color" content="#000000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
+        <Alert/>
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
         <Footer />
