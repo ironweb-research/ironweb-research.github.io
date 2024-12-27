@@ -32,31 +32,31 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/img/logo/apple-touch-icon.png"
+          href="/assets/logo/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/img/logo/favicon_32x32.png"
+          href="/assets/logo/favicon_32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/img/logo/favicon_16x16.png"
+          href="/assets/logo/favicon_16x16.png"
         />
-        <link rel="manifest" href="/img/logo/site.webmanifest" />
+        <link rel="manifest" href="/assets/logo/site.webmanifest" />
         <link
           rel="mask-icon"
-          href="/img/logo/safari-pinned-tab.svg"
+          href="/assets/logo/safari-pinned-tab.svg"
           color="#000000"
         />
         <link rel="icon" href="/assets/logo/favicon.ico" type="image/x-icon"/>
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"
-          content="/img/logo/browserconfig.xml"
+          content="/assets/logo/browserconfig.xml"
         />
         <meta name="theme-color" content="#000000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
