@@ -35,7 +35,6 @@
 [data-mode="system"] .switch:hover {
   border: 1.5px solid #1e1b4b;
   box-shadow: 0 0 10px 0px grey;
-
 } 
 
 [data-mode="dark"] .switch {
@@ -58,7 +57,6 @@
   background-color: #fef9e7;
   transition: all 0s;
 }
-
 
 @keyframes n {
   40% {

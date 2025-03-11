@@ -1,70 +1,31 @@
-/* globals.css */
-/* .background { */
-  /* position: relative;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  background: url('/assets/background/backgroundi.gif');
-  animation: scrollBackground 10s linear infinite; */
-  /* position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: url('/assets/background/backgroundi.gif') no-repeat center center;
-  background-size: cover;
-  animation: scrollBackground 10s linear infinite; */
-
-  /* position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: url('/assets/background/backgroundi.gif') no-repeat center center;
-  background-size: cover; /* This ensures the image covers the entire background area */
-  /* animation: scrollBackground 10s linear infinite; */
-/* }
-
-@keyframes scrollBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -100% 0;
-  }
-} */ 
-
-/* .background {
+.background {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: url('/assets/background/backgroundi.gif') no-repeat center center;
-  background-size: cover; /* This ensures the image covers the entire background area */
-
-.parallax {
-  position: relative;
-  overflow: hidden;
   height: 100%;
-  perspective: 1px;
-}
-
-.parallax__layer {
-  position: absolute;
-  /* top: 500; */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-}
-
-.parallax__layer--back {
+  overflow: hidden;
   background: url('/assets/background/background-core.gif') no-repeat center center;
   background-size: cover;
-  transform: translateZ(-1px) scale(2);
+  transition: all 0.3s ease-in-out 0s !important;
 }
 
-.parallax__layer--base {
+[data-mode="system"] .background {
   position: relative;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1; 
+}
+
+[data-mode="dark"] .background {
+  opacity: 1; 
+}
+
+[data-mode="light"] .background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url('/assets/background/background-core-day.gif') no-repeat center center;
+  background-size: cover;
+  transition: all 0.3s ease-in-out 0s !important;
 }

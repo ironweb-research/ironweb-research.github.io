@@ -1,9 +1,7 @@
 import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
-import { SectionSeparator } from "./_components/section-separator";
 import { IRONWEB_ANI_GIF_URL } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 
@@ -67,13 +65,9 @@ export default function RootLayout({
       >
         <Alert/>
         <ThemeSwitcher />
-        {/* <SectionSeparator /> */}
-        <div className="parallax">
-        <div className="parallax__layer parallax__layer--back"></div>
-        <div className="parallax__layer parallax__layer--base">
-          {children}
-        </div>
-        </div>
+          <div className="border-neutral-200 mt-28 min-h-screen background">
+            {children}
+          </div>
         <Footer />
       </body>
     </html>
