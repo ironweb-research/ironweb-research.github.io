@@ -19,7 +19,7 @@ const CoverPage: React.FC = () => {
               <h2>Our Expertise &rarr;</h2>
             </div>
             <div className="flip-card-back">
-              <p>Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and crytocurrency.</p>
+              <p>Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and cryptocurrency.</p>
             </div>
           </div>
         </div>

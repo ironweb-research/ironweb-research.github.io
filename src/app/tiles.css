@@ -35,6 +35,7 @@
 }
 .flip-card-front {
     background-color: #bbb;
+    transparent: 10%;
     color: black;
     display: flex;
     align-items: center;

@@ -1,5 +1,6 @@
 import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
+import { SectionSeparator } from "./_components/section-separator";
 import { IRONWEB_ANI_GIF_URL } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
 import type { Metadata } from "next";
@@ -62,11 +63,17 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        className={cn(inter.className, "dark:bg-black dark:text-slate-400")}
       >
         <Alert/>
         <ThemeSwitcher />
-        <div className="min-h-screen">{children}</div>
+        {/* <SectionSeparator /> */}
+        <div className="parallax">
+        <div className="parallax__layer parallax__layer--back"></div>
+        <div className="parallax__layer parallax__layer--base">
+          {children}
+        </div>
+        </div>
         <Footer />
       </body>
     </html>
