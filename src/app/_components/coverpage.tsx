@@ -41,7 +41,7 @@ const CoverPage: React.FC = () => {
             <div className="flip-card-back">
               <p>Who we are defines our fields of expertise, views and research {" "}
               <a
-                href={`https://ironweb-research.github.io/we_are/`}
+                href={`/we_are/`}
                 className="underline hover:text-green-400 duration-200 transition-colors"
               >
               topics.

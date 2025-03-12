@@ -20,6 +20,18 @@ jobs:
     steps:
       - name: Checkout full branches
         uses: actions/checkout@v4
+      - name: Checkout blog folder in private repo
+        uses: actions/checkout@v4
+        with:
+          repository: ironweb-research/blog_post
+          token: ${{ secrets.PULL_BLOG_POST_TOKEN }}
+          path: _posts
+      - name: Move blog post to correct level
+        id: move_blog_post
+        run: |
+          mv ./_posts/_posts/*.mdx _posts
+          rm ./_posts/README.md
+          find ./_posts -mindepth 1 -depth -type d ! -name "*.mdx" -exec rm -r {} +
       - name: Verify PWD 
         id: present-working-directory
         run: |
@@ -28,6 +40,10 @@ jobs:
           ls -lha
           echo "Advance check on workflow loaded onto ./.github"
           ls -lha ./.github
+          echo "Advance check on blog post loaded onto ./_posts"
+          ls -lha ./_posts
+          echo "Advance check on blog post loaded onto recursive ./src/app"
+          ls -Rlha ./src/app        
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -115,3 +131,7 @@ jobs:
           echo "Present deployment directory----->: $(pwd)"
           echo "Advance check on all contents, incl hidden, are loaded onto present deployment directory"
           ls -lha
+      - name: Verify deployment url 
+        id: Verify-deployment-URL
+        run: |
+          echo "Deployment URL ---->: ${{ steps.deployment.outputs.page_url }}"
