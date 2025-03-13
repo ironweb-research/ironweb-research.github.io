@@ -1,4 +1,4 @@
-// for we_are repo
+// for main repo
 .logo {
     display: flex;
     justify-content: center;
@@ -28,4 +28,20 @@
 
 [data-mode="dark"] .logo-image {
   --logo-filter: invert(100%) brightness(100%);
+}
+
+@keyframes contrast {
+  0% {
+    filter: contrast(60%);
+  }
+  50% {
+    filter: contrast(250%);
+  }
+  100% {
+    filter: contrast(100%);
+  }
+}
+
+.svg-element {
+  animation: contrast 3s ease-in-out infinite;
 }

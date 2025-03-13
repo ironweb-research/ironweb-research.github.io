@@ -1,3 +1,4 @@
+import { ProfileLogoSVG } from "@/app/_components/main_frame/svg_icon";
 export const dynamic = 'force-static';
 export default function Contact() {
   return (
@@ -6,7 +7,7 @@ export default function Contact() {
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
+      <ProfileLogoSVG />
         <p className="description">Contact Page</p>
       </main>
 

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import { IRONWEB_ANI_GIF_URL } from "@/lib/constants";
+import { IRONWEB_ONE_SVG } from "@/lib/constants";
 
 const SubpageHeader = () => {
   return (
     <div className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <Link href="../" className="flex items-center">
-        <div className="flex-col items-center">
+        <div className="flex-col items-center svg-element">
           <Image
-            src= {IRONWEB_ANI_GIF_URL}
+            src= {IRONWEB_ONE_SVG}
             alt="Logo"
             width={400} // Adjust the width as needed
             height={400} // Adjust the height as needed

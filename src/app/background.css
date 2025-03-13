@@ -8,11 +8,7 @@
 }
 
 [data-mode="system"] .background {
-  background: 
-    linear-gradient(to bottom, #010202, #000000) , 
-    url('/assets/background/background-core.gif') no-repeat center center;
-  background-size: contain, contain; 
-  background-blend-mode: overlay; 
+  background: transparent;
   opacity: 1; 
 }
 

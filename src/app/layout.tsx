@@ -1,6 +1,6 @@
 import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
-import { IRONWEB_ANI_GIF_URL } from "@/lib/constants";
+import { IRONWEB_ONE_SVG } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
 import { Inter } from "next/font/google";
 import cn from "classnames";
@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: 'Ironweb-Research ~ Future is Secure',
     description: 'Our Startup aims to integrate blockchain technology to secure networking systems.',
-    images: [IRONWEB_ANI_GIF_URL],
+    images: [IRONWEB_ONE_SVG],
   },
 }
 
