@@ -14,15 +14,17 @@
 
 [data-mode="dark"] .background {
   background: 
-    linear-gradient(to bottom, #010202, #000000) , 
-    url('/assets/background/background-core.gif') no-repeat center center;
-  background-size: cover, contain; 
+    radial-gradient(#7F7F7F 40%, #506464, #7F7F7F),
+    linear-gradient(to bottom, #000000, #506464, #000000);
+  background-size: cover; 
   background-blend-mode: overlay; 
   opacity: 1; 
 }
 
 [data-mode="light"] .background {
-  background-colour: white;
+  background: 
+    radial-gradient(#CAFEFE 80%, #FFFFFF),
+    linear-gradient(to bottom, #FFFFFF, #CAFEFE, #FFFFFF);
   background-size: cover, contain; 
   background-blend-mode: overlay; 
   opacity: 1; 

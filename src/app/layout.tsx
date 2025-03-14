@@ -65,7 +65,7 @@ export default function RootLayout({
       >
         <Alert/>
         <ThemeSwitcher />
-          <div className="border-neutral-200 mt-28 min-h-screen background">
+          <div className="border-neutral-200 mt-20 min-h-screen background">
             {children}
           </div>
         <Footer />
