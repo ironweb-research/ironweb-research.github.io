@@ -1,0 +1,101 @@
+{
+    "HomePage": {
+      "title": "Our Services",
+      "hero": {
+        "welcome": "Welcome to",
+        "title": "Next.js Starter",
+        "description": "Build faster with our powerful Next.js starter! Packed with essential tools like state management, React Query, I18n, CI/CD, and customizable UI components, it's everything you need to kickstart scalable, high-performance projects effortlessly.",
+        "buttons": {
+          "getStarted": "Get Started",
+          "viewGithub": "View on GitHub"
+        }
+      },
+      "story": {
+        "title": {
+          "prefix": "Customisation:",
+          "suffix": "We Have You Covered"
+        },
+        "description": "Here's what makes us stand out. Our expertise areas are as follows. ",
+        "items": {
+          "CISOservice": {
+            "name": "CISO-as-a-Service",
+            "summary": "Leverage Our Expertise to Elevate Your Cybersecurity Posture",
+            "description": "Our CISO-as-a-Service provides your business with top-tier security leadership without the full-time cost. We simplify the complexities of cybersecurity, helping you navigate the ever-evolving digital landscape. By alleviating these persistent and complex challenges, we enable you to focus on what matters most—your business."
+          },
+          "Advisory": {
+            "name": "Cybersecurity Advisory",
+            "summary": "Stay Ahead of Threats with Proactive Cybersecurity Advisory",
+            "description": "We offer comprehensive risk assessments and actionable insights to keep your business safe, ensuring your defences are always up to date. With our layered cybersecurity strategies tailored for your company, we help mitigate risks and enhance your resilience against evolving threats."
+          },
+          "training": {
+            "name": "Security Awareness Training",
+            "summary": "Equip and Conduct Tailored Security Awareness Training Program",
+            "description": "With customised training programmes designed by our experts for all levels, we prepare your company to handle cybersecurity challenges. Raise the bar and invest in your team now."
+          },
+          "penTest": {
+            "name": "Penetration Testing",
+            "summary": "Uncover Vulnerabilities Before Deeper Cracks",
+            "description": "We offer different Penetration Testing packages to suit your needs and availability, helping to enhance your business's security. Book a penetration test with us to stay ahead of potential threats."
+          },
+
+          "forensics": {
+            "name": "Forensics Investigation",
+            "summary": "Uncover the Truth, Regain Market Confidence",
+            "description": "Your market confidence is our top priority! When security incidents occur, our Forensics Investigation service provides detailed analysis to correct faults and contain impacts, helping you minimise damage, reduce downtime, and regain your investors' confidence."
+          },
+          "cloudDeploymentMigration": {
+            "name": "Cloud Deployment & Migration",
+            "summary": "Enhanced Efficiency and Cost Savings",
+            "description": "Experience a smooth transition to the cloud to ensure high availability and cost savings. We create customised migration plans that fit your unique needs, ensuring security and business continuity."
+          }          
+        }
+      },
+      "background": {
+        "title": "About Us",
+        "overview": "Overview",
+        "description": "Founded in 2021 in Taiwan, our company has steadily expanded into Southeast Asia, driven by a passion for innovation and excellence in web security.",
+        "aboutus": {
+          "focus": "As a research-focused company, we strive to:",
+          "items":{
+            "focus_one":{
+              "writeup":"Develop a next-generation web security suite,"},
+            "focus_two":{
+              "writeup":"Ensure our solutions remain at the cutting edge of technology,"},
+            "focus_three":{
+              "writeup":"Meet our customers' needs in the most affordable way possible."}
+          }
+        },
+        "commitment": "Our commitment to customisation means we tailor our services to meet the unique needs of each client, recognising that no two companies are set up or function in the same way. ",
+        "helpyou": "Whether you’re seeking advanced cybersecurity measures or personalized security strategies, we are here to help you navigate the increasingly sophisticated digital landscape and tackle evolving cyber threats that grow in both complexity and scale.",
+        "onboard": "Join us on our journey as we continue to push the boundaries of web security and empower businesses across the region to achieve their full potential.",
+        "features": {
+          "vision": {
+            "title": "Vision",
+            "description": "To be the leader in next-gen web security suite."
+          },
+          "expertise": {
+            "title": "Our Expertise",
+            "description": "Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and cryptocurrency."
+          },
+          "views": {
+            "title": "Our Views",
+            "description": "Our perspective on today’s internet security landscape is that it is disarrayed and monopolized, limiting your choices but to accommodate. We are committed to changing this."
+          },
+          "blog": {
+            "title": "Our Blog",
+            "description": "Who we are defines our fields of expertise, views and research."
+          }
+        }
+      }
+    },
+    "Header": {
+      "navigation": {
+        "home": "Home",
+        "features": "Features",
+        "techStack": "Tech Stack"
+      }
+    },
+    "Footer": {
+      "copyright": "Copyright © {year} NextJS StarterKit. All rights reserved."
+    }
+  }

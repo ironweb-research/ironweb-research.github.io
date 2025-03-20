@@ -16,10 +16,10 @@ const CoverPage: React.FC = () => {
         <div className="tile">
           <div className="flip-card">
             <div className="flip-card-front">
-              <h2>Our Expertise &rarr;</h2>
+              <h2 className="card-summary">Our Expertise &rarr;</h2>
             </div>
             <div className="flip-card-back">
-              <p>Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and cryptocurrency.</p>
+              <p className="card-description">Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and cryptocurrency.</p>
             </div>
           </div>
         </div>

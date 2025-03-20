@@ -1,9 +1,9 @@
+import cn from "classnames";
+import { Inter } from "next/font/google";
 import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
 import { IRONWEB_ONE_SVG } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
-import { Inter } from "next/font/google";
-import cn from "classnames";
 
 import "./globals.css";
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         <link
           rel="apple-touch-icon"
@@ -63,12 +63,12 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-black dark:text-slate-400")}
       >
-        <Alert/>
+        <Alert />
         <ThemeSwitcher />
           <div className="border-neutral-200 mt-20 min-h-screen background">
             {children}
           </div>
-        <Footer />
+        <Footer className="fixed bottom-0 left-0 w-full" />
       </body>
     </html>
   );

@@ -1,6 +1,8 @@
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/main_frame/intro";
-import CoverPage from "@/app/_components/coverpage";
+import Background from "@/app/_components/our-background";
+import Services from "@/app/_components/services"
+import { SectionSeparator } from "@/app/_components/section-separator";
 
 export default function Index() {
 
@@ -8,7 +10,9 @@ export default function Index() {
     <main>
       <Container>
         <Intro />
-        <CoverPage />
+        <Background />
+        <SectionSeparator />
+        <Services />
 
       </Container>
     </main>

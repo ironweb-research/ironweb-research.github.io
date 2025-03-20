@@ -32,7 +32,7 @@
 
 @keyframes contrast {
   0% {
-    filter: contrast(60%);
+    filter: contrast(40%);
   }
   50% {
     filter: contrast(250%);

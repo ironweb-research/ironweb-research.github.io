@@ -1,5 +1,5 @@
 import { ProfileLogoSVG } from "@/app/_components/main_frame/svg_icon";
-export const dynamic = 'force-static';
+// export const dynamic = 'force-static';
 export default function Contact() {
   return (
     <div className="container">
@@ -7,7 +7,7 @@ export default function Contact() {
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-      <ProfileLogoSVG />
+      {/* <ProfileLogoSVG /> */}
         <p className="description">Contact Page</p>
       </main>
 
@@ -23,14 +23,14 @@ export default function Contact() {
       </footer>
 
       <style>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+        // .container {
+        //   min-height: 100vh;
+        //   padding: 0 0.5rem;
+        //   display: flex;
+        //   flex-direction: column;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
 
         main {
           padding: 5rem 0;

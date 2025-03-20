@@ -1,0 +1,101 @@
+{
+    "HomePage": {
+      "title": "Our Services",
+      "hero": {
+        "welcome": "Welcome to",
+        "title": "Next.js Starter",
+        "description": "Build faster with our powerful Next.js starter! Packed with essential tools like state management, React Query, I18n, CI/CD, and customizable UI components, it's everything you need to kickstart scalable, high-performance projects effortlessly.",
+        "buttons": {
+          "getStarted": "Get Started",
+          "viewGithub": "View on GitHub"
+        }
+      },
+      "story": {
+        "title": {
+          "prefix": "定制服务:",
+          "suffix": "我们为您做到"
+        },
+        "description": "Here's what makes us stand out. Our expertise areas are as follows. ",
+        "items": {
+          "CISOservice": {
+            "name": "首席信息安全官即服务",
+            "summary": "借助我们的专业知识以强化您的网络安全态势",
+            "description": "无需全职成本, 我们的首席信息安全官即服务为您的企业提供顶级的网络安全服务。我们简化网络安全的复杂性，助于您驾驭不断变化的网络环境。通过缓解这些诸多复杂的挑战，我们让您可以专注于最重要的——您的业务。"
+          },
+          "Advisory": {
+            "name": "网络安全咨询",
+            "summary": "积极且主动，领先于网络威胁",
+            "description": "我们提供全面的风险评估和切实可行的见解，保持防御措施始终最新状态。通过我们为您的企业量身定制的分层网络安全策略，我们帮助您减轻风险并增强抵御不断演变的网络安全威胁。"
+          },
+          "training": {
+            "name": "网络安全意识培训",
+            "summary": "提供和开展量身定制的网络安全意识培训计划",
+            "description": "通过我们的专家为您各级别员工定制的培训计划，我们帮助您的企业应对网络安全挑战。现在就提升标准并投资您的团队。"
+          },
+          "penTest": {
+            "name": "渗透测试",
+            "summary": "及时挖掘漏洞, 防止裂缝加深",
+            "description": "我们提供不同的渗透测试方案，以满足您的需求和时间安排，助于提升您企业的安全性。致电预约我们的渗透测试，提前防范潜在威胁。"
+          },
+
+          "forensics": {
+            "name": "取证调查",
+            "summary": "揭开真相，重拾市场信心",
+            "description": "您的市场信心是我们的首要任务！当网络安全事件发生时，我们的取证调查服务提供详细分析，以纠正故障并遏制影响，助于您最大限度地减少损失和停机时间并重新赢得投资者的信心。"
+          },
+          "cloudDeploymentMigration": {
+            "name": "云部署、云迁移",
+            "summary": "提高效率并节省成本",
+            "description": "体验向云的平稳过渡，以确保高可用性并节省成本。 我们制定适合您独特需求的定制迁移计划，确保安全性和业务连续性。"
+          }          
+        }
+      },
+      "background": {
+        "title": "About Us",
+        "overview": "Overview",
+        "description": "成立于2021年，位于台湾，凭借对创新和网络安全卓越的热情，我们稳步扩展至东南亚。",
+        "aboutus": {
+          "focus": "作为一家年轻的研究型公司，我们尽我所能，立志：",
+          "items":{
+            "focus_one":{
+              "writeup":"开发下一代网络安全套件，"},
+            "focus_two":{
+              "writeup":"确保我们的解决方案始终处于技术前沿，"},
+            "focus_three":{
+              "writeup":"以最实惠的方式满足客户的需求。"}
+          }
+        },
+        "commitment": "应没有两家公司的设立或运作方式是相同的，因此我们致力于定制化。这意味着我们会根据每个客户的独特需求量身定制我们的服务。",
+        "helpyou": "无论您是在寻求先进的网络安全措施，还是个性化的安全策略，我们都致力于帮助您驾驭日益尖端的网络环境，并应对越来越复杂及规模不断扩大的网络威胁。",
+        "onboard": "加入我们的旅程，让我们继续突破网络安全的界限，帮助地区内的企业实现其全部潜力。",
+        "features": {
+          "vision": {
+            "title": "Vision",
+            "description": "To be the leader in next-gen web security suite."
+          },
+          "expertise": {
+            "title": "Our Expertise",
+            "description": "Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and cryptocurrency."
+          },
+          "views": {
+            "title": "Our Views",
+            "description": "Our perspective on today’s internet security landscape is that it is disarrayed and monopolized, limiting your choices but to accommodate. We are committed to changing this."
+          },
+          "blog": {
+            "title": "Our Blog",
+            "description": "Who we are defines our fields of expertise, views and research."
+          }
+        }
+      }
+    },
+    "Header": {
+      "navigation": {
+        "home": "Home",
+        "features": "Features",
+        "techStack": "Tech Stack"
+      }
+    },
+    "Footer": {
+      "copyright": "Copyright © {year} NextJS StarterKit. All rights reserved."
+    }
+  }
