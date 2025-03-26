@@ -23,8 +23,8 @@
 
 [data-mode="light"] .background {
   background: 
-    radial-gradient(#7F7F7F 70%, #DAF5FE, #7F7F7F 20%),
-    linear-gradient(to bottom, #FFFFFF, #DAF5FE 20%, #FFFFFF 70%);
+    radial-gradient(#7F7F7F 70%, #ECF9FE, #7F7F7F 20%),
+    linear-gradient(to bottom, #FFFFFF, #ECF9FE 20%, #FFFFFF 70%);
   background-size: cover; 
   background-blend-mode: overlay; 
   opacity: 1; 

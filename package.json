@@ -8,6 +8,7 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
+    "framer-motion": "^12.6.0",
     "globby": "^14.0.2",
     "gray-matter": "^4.0.3",
     "nanoid": "^5.0.9",

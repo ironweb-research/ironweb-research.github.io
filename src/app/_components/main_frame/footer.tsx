@@ -29,7 +29,7 @@ export function Footer({ className }: { className?: string }) {
               // className="flex-1 mx-3 font-bold hover:underline text-center w-full lg:w-auto"
               className="flex-1 mx-3 bg-black text-white  hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white font-bold py-2 px-6 lg:px-4 duration-200 transition-colors mb-4 lg:mb-0 text-center w-full lg:w-auto"
             >
-              Contact us for demo
+              Contact
             </a>
           </div>
         </div>

@@ -5,7 +5,7 @@ import Footer from "@/app/_components/main_frame/footer";
 import { IRONWEB_ONE_SVG } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
 
-import "./globals.css";
+import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

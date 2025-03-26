@@ -15,7 +15,7 @@
           "prefix": "Customisation:",
           "suffix": "We Have You Covered"
         },
-        "description": "Here's what makes us stand out. Our expertise areas are as follows. ",
+        "description": "What sets us apart are our areas of expertise. ",
         "items": {
           "CISOservice": {
             "name": "CISO-as-a-Service",
@@ -51,24 +51,45 @@
         }
       },
       "background": {
-        "title": "About Us",
-        "overview": "Overview",
-        "description": "Founded in 2021 in Taiwan, our company has steadily expanded into Southeast Asia, driven by a passion for innovation and excellence in web security.",
-        "aboutus": {
-          "focus": "As a research-focused company, we strive to:",
-          "items":{
-            "focus_one":{
-              "writeup":"Develop a next-generation web security suite,"},
-            "focus_two":{
-              "writeup":"Ensure our solutions remain at the cutting edge of technology,"},
-            "focus_three":{
-              "writeup":"Meet our customers' needs in the most affordable way possible."}
+        "title": {
+          "prefix": "With Us! Your",
+          "suffix": "Future Is Secure"
+        },
+        "overview": {
+          "description": "Founded in 2021 in Taiwan, our company has steadily expanded into Southeast Asia, ",
+          "passion":"driven by a passion for innovation and excellence in web security."
+        },
+        "items":{
+          "aboutus": {
+            "focus": "As a research-focused company, we strive to:",
+            "focusArea":{
+              "focus_one":{
+                "writeup":"Develop a next-generation web security suite,"},
+              "focus_two":{
+                "writeup":"Ensure our solutions remain at the cutting edge of technology,"},
+              "focus_three":{
+                "writeup":"Meet our customers' needs in the most affordable way possible."}
+            }
+          },
+          "commitment": {
+            "focus": "Our commitment to customisation means we tailor our services to meet the unique needs of each client, recognising that no two companies are set up or function in the same way. ",
+            "focusArea":{}
+          },
+          "helpyou": {
+            "focus": "Whether you’re seeking advanced cybersecurity measures or personalized security strategies, we are here to help you:",
+            "focusArea":{
+              "focus_one":{
+                "writeup":"navigate the increasingly sophisticated digital landscape and"},
+              "focus_two":{
+                "writeup":"tackle evolving cyber threats that grow in both complexity and scale."}
+            }
+          },
+          "onboard": {
+            "focus": "Join us on our journey as we continue to push the boundaries of web security and empower businesses across the region to achieve their full potential.",
+            "focusArea":{}
           }
         },
-        "commitment": "Our commitment to customisation means we tailor our services to meet the unique needs of each client, recognising that no two companies are set up or function in the same way. ",
-        "helpyou": "Whether you’re seeking advanced cybersecurity measures or personalized security strategies, we are here to help you navigate the increasingly sophisticated digital landscape and tackle evolving cyber threats that grow in both complexity and scale.",
-        "onboard": "Join us on our journey as we continue to push the boundaries of web security and empower businesses across the region to achieve their full potential.",
-        "features": {
+        "objectives": {
           "vision": {
             "title": "Vision",
             "description": "To be the leader in next-gen web security suite."
@@ -83,7 +104,7 @@
           },
           "blog": {
             "title": "Our Blog",
-            "description": "Who we are defines our fields of expertise, views and research."
+            "description": "Our belief shapes and drives our fields of expertise, views, and research."
           }
         }
       }

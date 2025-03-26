@@ -137,7 +137,18 @@ export const LogoAndBack: React.FC<IconProps> = ({ height = "50" }) => {
   )
 };
 
+export const TickCircle: React.FC<IconProps> = ({ fillColour = "#00bcff", strokeColour = "#00bcff" }) => {
+  return (
+    <svg className="h-[1lh] w-6 shrink-0" viewBox="0 0 22 22" fill="none" strokeLinecap="square">
+    <circle cx="11" cy="11" r="11" opacity="0.25" fill={fillColour} />
+    <circle cx="11" cy="11" r="10" strokeWidth="1" opacity="0.25" stroke={strokeColour} />
+    <path d="M8 11.5L10.5 14L14 8" strokeWidth="1.5" className="stroke-sky-800 dark:stroke-teal-300" />
+    </svg>
+  )
+};
+
 export default {
   ProfileLogoSVG,
   LogoAndBack,
+  TickCircle,
 }
