@@ -1,6 +1,5 @@
 // pages/index.tsx
 import React from 'react';
-// import Card from '@/app/_components/main_frame/card';
 import data from '@/lib/data_en.json';
 
 const ServicePage: React.FC = () => {
