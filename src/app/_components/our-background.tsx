@@ -80,7 +80,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
         </div>
       </motion.div>
 
-      {" "}
+      &nbsp;
       
       <motion.div ref={ref2} {...textTyping}>
 
@@ -107,7 +107,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
       </div>
       </motion.div>
 
-      {" "}
+      &nbsp;
 
       <Board items={items} />
 
@@ -115,7 +115,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
 
       <div className="bg-gray-100 p-2 dark:bg-white/10">
         <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
-          <div className="flex flex-wrap features-start justify-start mt-16 mb-16 md:mb-12">
+          <div className="flex flex-wrap justify-start mt-16 mb-16 md:mb-12">
 
 
             {Object.values(background.objectives).map((objective, index) => (

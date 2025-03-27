@@ -48,6 +48,8 @@ const config: Config = {
 			},
       fontSize: {
         'dynamic-board': 'clamp(2rem, calc(5vw), 4rem)',
+        'dynamic-board-item': 'clamp(2rem, calc(4vw), 3rem)',
+        'dynamic-board-writeup': 'clamp(1.5rem, calc(2vw), 3rem)',
       },
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
