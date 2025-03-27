@@ -80,15 +80,14 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
         </div>
       </motion.div>
 
-      &nbsp;
+      {" "}
       
       <motion.div ref={ref2} {...textTyping}>
 
       <div className="bg-gray-100 p-2 dark:bg-white/10">
         <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
           <div className="space-y-6">
-            <div className="w-[1lw] h-[5lh] md:h-auto lg:text-7xl mb:text-5xl sm:text-5xl text-center ">
-
+            <div className="text-center text-dynamic-board">
               {text.map((word, index) => (
                 <motion.span
                   key={index}
@@ -98,15 +97,9 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
                 >
                   {word}{" "}
                 </motion.span>
-
-              ))}
-
-              
-              
-              <p className="svg-element italic font-extrabold">
-              
+              ))}              
+              <p className="svg-element italic font-extrabold text-sky-400 dark:text-teal-300">
                 {background.overview.passion}
-                
               </p>
             </div>
           </div>
@@ -114,7 +107,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
       </div>
       </motion.div>
 
-      &nbsp;
+      {" "}
 
       <Board items={items} />
 
@@ -127,7 +120,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
 
             {Object.values(background.objectives).map((objective, index) => (
               <div key={index} className="w-full">
-                                <motion.li
+                <motion.li
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isVisible_staggeredList ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

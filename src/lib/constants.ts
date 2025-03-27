@@ -1,5 +1,4 @@
 export const EXAMPLE_PATH = "blog-starter";
-export const CMS_NAME = "Markdown";
 export const BASE_URL = "https://ironweb-research.github.io";
 export const LOGO_PATH = "/assets/logo";
 export const REPO_NAME = ""; // for future expansion use
