@@ -13,9 +13,9 @@
       "story": {
         "title": {
           "prefix": "定制服务:",
-          "suffix": "我们为您做到"
+          "suffix": "让我们与众不同的是我们的专长领域。"
         },
-        "description": "让我们与众不同的是我们的专长领域。",
+        "QuestionContact": "有疑问？联系我们",
         "items": {
           "CISOservice": {
             "name": "首席信息安全官即服务",
@@ -52,8 +52,8 @@
       },
       "background": {
         "title": {
-          "prefix": "With Us! Your",
-          "suffix": "Future Is Secure"
+          "prefix": "With",
+          "suffix": "Your Future Is Secure"
         },        
         "overview": {
           "description": "于 2021 年在台湾/香港成立，在创新热情的推动下，我们稳步扩展到东南亚。",

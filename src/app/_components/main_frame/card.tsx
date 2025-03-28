@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ name, summary, description }) => {
   return (
-    <div className="feature-cards">
+    <div className="feature-cards flex flex-col">
       <h2 className="card-name">{name}</h2>
       <h3 className="card-summary">{summary}</h3>
       <p className="card-description"> {description}</p>

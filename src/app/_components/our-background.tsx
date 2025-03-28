@@ -1,14 +1,17 @@
 'use client'
 
 import React, { useRef } from 'react';
+import Image from "next/image";
 import { motion } from 'framer-motion';
-import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import { IRONWEB_SOLO_SVG } from "@/lib/constants";
+
 
 import data_en from '@/lib/data_en.json';
 import data_cn from '@/lib/data_cn.json';
 
 import Card from '@/app/_components/main_frame/card';
 import Board from '@/app/_components/main_frame/board';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 interface BackgroundProps {
   language: string;
@@ -72,7 +75,15 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
         <div className="bg-gray-100 p-2 dark:bg-white/10">
           <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
             <div className="space-y-6">
-              <div className="ml-10 mr-10 lg:text-7xl lg:ml-16 lg:mr-16 text-6xl text-center text-pretty">{background.title.prefix}
+              <div className="ml-10 mr-10 lg:text-7xl lg:ml-16 lg:mr-16 text-6xl text-center text-pretty">
+                {background.title.prefix}
+              <Image 
+                src={IRONWEB_SOLO_SVG}
+                alt="Logo"
+                width={200}
+                height={200}
+                className="svg-element" // Add "logo-image" class, if need to toggle logo
+              />
               <p className="svg-element">{background.title.suffix}</p>
               </div>
             </div>
@@ -84,23 +95,24 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
       
       <motion.div ref={ref2} {...textTyping}>
 
-      <div className="bg-gray-100 p-2 dark:bg-white/10">
+      <div className="rounded-xl bg-gray-100 p-2 dark:bg-white/10">
         <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
           <div className="space-y-6">
-            <div className="text-center text-dynamic-board">
+            <div className="text-center text-dynamic-fontsize-1">
               {text.map((word, index) => (
                 <motion.span
                   key={index}
                   initial={{ opacity: 0 }}
                   animate={isVisible_textTyping ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ duration: 0.5, delay: isVisible_textTyping ? index * 0.05 : 0 }}
+                  transition={{ duration: 0.5, delay: isVisible_textTyping ? index * 0.1 : 0 }}
                 >
                   {word}{" "}
                 </motion.span>
-              ))}              
-              <p className="svg-element italic font-extrabold text-sky-400 dark:text-teal-300">
-                {background.overview.passion}
-              </p>
+              ))}
+              <br></br>
+              <a className="svg-element bg-green-300/10 rounded-full italic font-extrabold text-sky-400 dark:text-teal-300">
+              {background.overview.passion}
+              </a>
             </div>
           </div>
         </div>
@@ -126,12 +138,12 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
                   animate={isVisible_staggeredList ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: isVisible_staggeredList ? index * 0.5 : 0 }}
                 >
-              <Card 
-                name={objective.title} 
-                summary={""} 
-                description={objective.description} 
-              />
-              </motion.li>
+                  <Card 
+                    name={objective.title} 
+                    summary={""} 
+                    description={objective.description} 
+                  />
+                </motion.li>
               </div>
             ))}
           

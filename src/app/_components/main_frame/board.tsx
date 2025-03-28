@@ -27,7 +27,7 @@ const Board: React.FC<BoardProps> = ({ items }) => {
           <div className="rounded-xl bg-gray-300/10 p-2 dark:bg-white/10">
             <div className="rounded-xl bg-sky-300/10 p-10 text-black dark:bg-gray-950/10 dark:text-gray-300 border-2 border-blue-400/30 dark:border-teal-100 ">
               <div className="space-y-10 ml-1 mr-1 lg:ml-15 lg:mr-25 md:ml-20 md:mr-20 sm:ml-8 sm:mr-8">
-                  <p className="text-dynamic-board-item text-center text-pretty">{item.focus}</p>
+                  <p className="text-dynamic-fontsize-2 text-center">{item.focus}</p>
                   <ul className="space-y-3">
                     <li className="flex-row space-y-6">
                       {Object.values(item.focusArea).map((area, index) => (
@@ -36,7 +36,7 @@ const Board: React.FC<BoardProps> = ({ items }) => {
                               <div className="svg-element">
                                 <TickCircle />
                               </div>
-                              <p className="ml-1 text-dynamic-board-writeup text-left text-pretty">{area.writeup}</p>
+                              <p className="ml-1 text-dynamic-fontsize-3 text-left">{area.writeup}</p>
                             </div>
                           )
                         ))}

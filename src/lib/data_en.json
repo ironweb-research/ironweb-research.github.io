@@ -13,9 +13,9 @@
       "story": {
         "title": {
           "prefix": "Customisation:",
-          "suffix": "We Have You Covered"
+          "suffix": "What sets us apart are our areas of expertise."
         },
-        "description": "What sets us apart are our areas of expertise. ",
+        "QuestionContact": "Questions? Contact Us.",
         "items": {
           "CISOservice": {
             "name": "CISO-as-a-Service",
@@ -52,8 +52,8 @@
       },
       "background": {
         "title": {
-          "prefix": "With Us! Your",
-          "suffix": "Future Is Secure"
+          "prefix": "With",
+          "suffix": "Your Future Is Secure"
         },
         "overview": {
           "description": "Founded in 2021 in Taiwan/Hong Kong, we have steadily expanded into Southeast Asia, driven by our passion for innovation.",

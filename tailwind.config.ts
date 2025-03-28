@@ -47,9 +47,11 @@ const config: Config = {
 				sans: ['Roboto', '"Segoe UI"', 'sans-serif', ...fontFamily.sans],
 			},
       fontSize: {
-        'dynamic-board': 'clamp(2rem, calc(5vw), 4rem)',
-        'dynamic-board-item': 'clamp(2rem, calc(4vw), 3rem)',
-        'dynamic-board-writeup': 'clamp(1.5rem, calc(2vw), 3rem)',
+        'dynamic-fontsize-1': 'clamp(2rem, calc(5.5vw), 4.5rem)',
+        'dynamic-fontsize-2': 'clamp(1.7rem, calc(4.2vw), 3.5rem)',
+        'dynamic-fontsize-3': 'clamp(1.2rem, calc(3vw), 3rem)',
+        'dynamic-fontsize-4': 'clamp(1rem, calc(2vw), 3rem)',
+        'dynamic-fontsize-5': 'clamp(0.7rem, calc(1.5vw), 2rem)',
       },
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
