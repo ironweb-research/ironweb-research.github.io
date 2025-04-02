@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Container from "@/app/_components/container";
 import { SectionSeparator } from "@/app/_components/section-separator";
 // import { IRONWEB_ONE_SVG } from "@/lib/constants"
-import { ProfileLogoSVG, LogoAndBack, ResearchIcon, CommitmentIcon, HelpyouIcon, OnboardIcon, SizingIcon } from "@/app/_components/main_frame/svg_icon"
+import { ProfileLogoSVG, TickCircle, LogoAndBack, ResearchIcon, CommitmentIcon, HelpyouIcon, OnboardIcon, SizingIcon } from "@/app/_components/main_frame/svg_icon"
 // import VisionPage  from "@/app/_components/vision" 
 
 
@@ -29,22 +29,32 @@ export default function TestPage() {
       <p>Create demo for sharing.</p>
       <div> 
           <SizingIcon /> DIV nothing
+          <TickCircle />
       </div>
       
-      <div className="size-300"> 
+      <div className="size-300 shrink-0"> 
           <SizingIcon /> DIV 300
-      </div>
-      <br></br>
+          <TickCircle />
       startline
       <LogoAndBack height = {100} />
       endline
+      </div>
+
       <div className="size-96 justify-self-center"> 
           <SizingIcon /> DIV 96
+          <TickCircle />
       </div>
       <br></br>
 
       <div className="size-48 justify-self-center"> 
           <SizingIcon /> DIV 48
+          <TickCircle />
+      </div>
+
+      
+      <div className="size-40 justify-self-center"> 
+          <SizingIcon /> DIV 40
+          <TickCircle />
       </div>
 <br></br>
       

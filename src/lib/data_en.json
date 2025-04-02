@@ -24,13 +24,13 @@
             "focus": "As a research-focused company, we strive to provide innovative solutions aimed at:",
             "focusArea": {
               "focus_one": {
-                "writeup": "Developing a next-generation web security suite,"
+                "writeup": "developing a next-generation web security suite,"
               },
               "focus_two": {
-                "writeup": "Ensuring our products and services remain at the cutting edge of technology,"
+                "writeup": "ensuring our products and services remain at the cutting edge of technology, and"
               },
               "focus_three": {
-                "writeup": "Meeting our customers' needs in the most affordable way possible."
+                "writeup": "meeting our customers' needs in the most affordable way possible."
               }
             }
           },
@@ -39,10 +39,10 @@
             "focusArea":{}
           },
           "helpyou": {
-            "focus": "Whether you’re seeking advanced cybersecurity measures or personalized security strategies, we are here to help you:",
+            "focus": "Whether you’re seeking advanced cybersecurity measures or personalized security strategies, we are here to help you to:",
             "focusArea":{
               "focus_one":{
-                "writeup":"navigate the increasingly sophisticated digital landscape and"},
+                "writeup":"navigate the increasingly sophisticated digital landscape, and"},
               "focus_two":{
                 "writeup":"tackle evolving cyber threats that grow in both complexity and scale."}
             }
