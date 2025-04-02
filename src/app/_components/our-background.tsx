@@ -11,6 +11,7 @@ import data_cn from '@/lib/data_cn.json';
 
 import Card from '@/app/_components/main_frame/card';
 import Board from '@/app/_components/main_frame/board';
+import Overview from '@/app/_components/main_frame/overview';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 interface BackgroundProps {
@@ -20,9 +21,9 @@ interface BackgroundProps {
 const Background: React.FC<BackgroundProps> = ({ language }) => {
   const { HomePage } = language === 'en' ? data_en: data_cn;
   const { background } = HomePage;
-  const { items } = background;
+  const { allaboutus } = background;
+  const { overview } = background;
   const ref = useRef<HTMLDivElement>(null);
-  const ref_two = useRef<HTMLDivElement>(null);
   const isVisible = useIntersectionObserver(ref, { threshold: 0.1 });
   
   const ref1 = useRef<HTMLDivElement>(null);
@@ -34,8 +35,6 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
   const isVisible_textTyping = useIntersectionObserver(ref2, { threshold: 0.1 });
   const isVisible_staggeredList = useIntersectionObserver(ref3, { threshold: 0.1 });
   
-  const text = background.overview.description.split(" ");
-
   const animation = {
     initial: { opacity: 0, y: 100 },
     animate: isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 },
@@ -90,49 +89,24 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
           </div>
         </div>
       </motion.div>
-
-      &nbsp;
-      
-      <motion.div ref={ref2} {...textTyping}>
-
-      <div className="rounded-xl bg-gray-100 p-2 dark:bg-white/10">
-        <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
-          <div className="space-y-6">
-            <div className="text-center text-dynamic-fontsize-1">
-              {text.map((word, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={isVisible_textTyping ? { opacity: 1 } : { opacity: 0 }}
-                  transition={{ duration: 0.5, delay: isVisible_textTyping ? index * 0.1 : 0 }}
-                >
-                  {word}{" "}
-                </motion.span>
-              ))}
-              <br></br>
-              <a className="svg-element bg-green-300/10 rounded-full italic font-extrabold text-sky-400 dark:text-teal-300">
-              {background.overview.passion}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </motion.div>
-
       &nbsp;
 
-      <Board items={items} />
+      <Overview founding={overview.founding} hashtag={overview.hashtag} />
+      &nbsp;
+
+      <Board allaboutus={allaboutus} />
+      &nbsp;
 
       <motion.div ref={ref3} {...staggeredList}>
 
-      <div className="bg-gray-100 p-2 dark:bg-white/10">
+      <div className="bg-red-800 p-2 dark:bg-white/10">
         <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
           <div className="flex flex-wrap justify-start mt-16 mb-16 md:mb-12">
 
 
             {Object.values(background.objectives).map((objective, index) => (
               <div key={index} className="w-full">
-                <motion.li
+                <motion.dl
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isVisible_staggeredList ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -143,7 +117,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
                     summary={""} 
                     description={objective.description} 
                   />
-                </motion.li>
+                </motion.dl>
               </div>
             ))}
           
@@ -154,7 +128,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
         </div>
       </div>
 
-    </motion.div>
+      </motion.div>
 
     </div>
   );

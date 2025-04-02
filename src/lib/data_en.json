@@ -10,6 +10,67 @@
           "viewGithub": "View on GitHub"
         }
       },
+      "background": {
+        "title": {
+          "prefix": "With",
+          "suffix": "Your Future Is Secure"
+        },
+        "overview": {
+          "founding": "Founded in 2021 in Taiwan/Hong Kong, we have steadily expanded into Southeast Asia, driven by our passion for innovation.",
+          "hashtag":"#Innovation"
+        },
+        "allaboutus":{
+          "research": {
+            "focus": "As a research-focused company, we strive to provide innovative solutions aimed at:",
+            "focusArea": {
+              "focus_one": {
+                "writeup": "Developing a next-generation web security suite,"
+              },
+              "focus_two": {
+                "writeup": "Ensuring our products and services remain at the cutting edge of technology,"
+              },
+              "focus_three": {
+                "writeup": "Meeting our customers' needs in the most affordable way possible."
+              }
+            }
+          },
+          "commitment": {
+            "focus": "No matter the size of your company, our commitment to customisation ensures we tailor our services to meet your unique needs.",
+            "focusArea":{}
+          },
+          "helpyou": {
+            "focus": "Whether you’re seeking advanced cybersecurity measures or personalized security strategies, we are here to help you:",
+            "focusArea":{
+              "focus_one":{
+                "writeup":"navigate the increasingly sophisticated digital landscape and"},
+              "focus_two":{
+                "writeup":"tackle evolving cyber threats that grow in both complexity and scale."}
+            }
+          },
+          "onboard": {
+            "focus": "Join us on our journey as we continue to push the boundaries of web security and empower businesses across the region to achieve their full potential.",
+            "focusArea":{}
+          }
+        },
+        "objectives": {
+          "vision": {
+            "title": "Vision",
+            "description": "To be the leader in next-gen web security suite."
+          },
+          "expertise": {
+            "title": "Our Expertise",
+            "description": "Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and cryptocurrency."
+          },
+          "views": {
+            "title": "Our Views",
+            "description": "Our perspective on today’s internet security landscape is that it is disarrayed and monopolized, limiting your choices but to accommodate. We are committed to changing this."
+          },
+          "blog": {
+            "title": "Our Blog",
+            "description": "Our belief shapes and drives our fields of expertise, views, and research."
+          }
+        }
+      },
       "story": {
         "title": {
           "prefix": "Customisation:",
@@ -48,64 +109,6 @@
             "summary": "Enhanced Efficiency and Cost Savings",
             "description": "Experience a smooth transition to the cloud to ensure high availability and cost savings. We create customised migration plans that fit your unique needs, ensuring security and business continuity."
           }          
-        }
-      },
-      "background": {
-        "title": {
-          "prefix": "With",
-          "suffix": "Your Future Is Secure"
-        },
-        "overview": {
-          "description": "Founded in 2021 in Taiwan/Hong Kong, we have steadily expanded into Southeast Asia, driven by our passion for innovation.",
-          "passion":"#Innovation"
-        },
-        "items":{
-          "aboutus": {
-            "focus": "As a research-focused company, we strive to:",
-            "focusArea":{
-              "focus_one":{
-                "writeup":"Develop a next-generation web security suite,"},
-              "focus_two":{
-                "writeup":"Ensure our solutions remain at the cutting edge of technology,"},
-              "focus_three":{
-                "writeup":"Meet our customers' needs in the most affordable way possible."}
-            }
-          },
-          "commitment": {
-            "focus": "Our commitment to customisation means we tailor our services to meet the unique needs of each client, recognising that no two companies are set up or function in the same way. ",
-            "focusArea":{}
-          },
-          "helpyou": {
-            "focus": "Whether you’re seeking advanced cybersecurity measures or personalized security strategies, we are here to help you:",
-            "focusArea":{
-              "focus_one":{
-                "writeup":"navigate the increasingly sophisticated digital landscape and"},
-              "focus_two":{
-                "writeup":"tackle evolving cyber threats that grow in both complexity and scale."}
-            }
-          },
-          "onboard": {
-            "focus": "Join us on our journey as we continue to push the boundaries of web security and empower businesses across the region to achieve their full potential.",
-            "focusArea":{}
-          }
-        },
-        "objectives": {
-          "vision": {
-            "title": "Vision",
-            "description": "To be the leader in next-gen web security suite."
-          },
-          "expertise": {
-            "title": "Our Expertise",
-            "description": "Our people are the most important assets! We bring together seasoned experts, with extensive R&D experience across industries in ICT, defense, financial and cryptocurrency."
-          },
-          "views": {
-            "title": "Our Views",
-            "description": "Our perspective on today’s internet security landscape is that it is disarrayed and monopolized, limiting your choices but to accommodate. We are committed to changing this."
-          },
-          "blog": {
-            "title": "Our Blog",
-            "description": "Our belief shapes and drives our fields of expertise, views, and research."
-          }
         }
       }
     },

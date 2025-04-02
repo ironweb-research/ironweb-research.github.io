@@ -1,7 +1,9 @@
-// Board.tsx
-import React from 'react';
-import { TickCircle } from '@/app/_components/main_frame/svg_icon';
+'use client'
 
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import { TickCircle, ResearchIcon, CommitmentIcon, HelpyouIcon, OnboardIcon } from "@/app/_components/main_frame/svg_icon";
 
 interface FocusArea {
   focus_one?: { writeup: string };
@@ -15,41 +17,93 @@ interface Item {
 }
 
 interface BoardProps {
-  items: { [key: string]: Item };
+  allaboutus: { [key: string]: Item };
 }
 
-const Board: React.FC<BoardProps> = ({ items }) => {
+const Board: React.FC<BoardProps> = ({ allaboutus }) => {
+  const svgs = [<ResearchIcon />, <CommitmentIcon />, <HelpyouIcon />, <OnboardIcon />];
+
   return (
     <div>
-      {Object.entries(items).map(([key, item]) => (
-        <div key={key} >
-          &nbsp;
-          <div className="rounded-xl bg-gray-300/10 p-2 dark:bg-white/10">
-            <div className="rounded-xl bg-sky-300/10 p-10 text-black dark:bg-gray-950/10 dark:text-gray-300 border-2 border-blue-400/30 dark:border-teal-100 ">
-              <div className="space-y-10 ml-1 mr-1 lg:ml-15 lg:mr-25 md:ml-20 md:mr-20 sm:ml-8 sm:mr-8">
-                  <p className="text-dynamic-fontsize-2 text-center">{item.focus}</p>
-                  <ul className="space-y-3">
-                    <li className="flex-row space-y-6">
-                      {Object.values(item.focusArea).map((area, index) => (
-                          area?.writeup && (
-                            <div key={index} className="flex ml-4">
-                              <div className="svg-element">
-                                <TickCircle />
-                              </div>
-                              <p className="ml-1 text-dynamic-fontsize-3 text-left">{area.writeup}</p>
-                            </div>
-                          )
+
+      {Object.entries(allaboutus).map(([boardkey, item], boardIndex) => {
+        const refBoard = useRef<HTMLDivElement>(null);
+        const refTextTyping = useRef<HTMLDivElement>(null);
+        const refListDisplay = useRef<HTMLDivElement>(null);
+
+        const isVisibleBoard = useIntersectionObserver(refBoard, { threshold: 0.1 });
+        const isVisibleTextTyping = useIntersectionObserver(refTextTyping, { threshold: 0.1 });
+        const isVisibleListDisplay = useIntersectionObserver(refListDisplay, { threshold: 0.1 });
+
+        const staggeredBoard = {
+          initial: { opacity: 0, y: 20 },
+          animate: isVisibleBoard ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+          transition: { duration: 0.5, delay: isVisibleBoard ? boardIndex * 0.5 : 0 }
+        };
+
+        const staggeredItem = {
+          initial: { opacity: 0, y: 20 },
+          animate: isVisibleListDisplay ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+          transition: { duration: 0.5, delay: isVisibleListDisplay ? 0.5 : 0 }
+        };
+
+        const SvgComponent = svgs[boardIndex];
+
+        return (
+          <motion.div ref={refBoard} {...staggeredBoard} key={boardkey}>
+            <div> 
+              &nbsp;
+              <div className="rounded-xl bg-gray-100 p-2 dark:bg-white/10">
+                  <div className="rounded-xl bg-sky-300/10 p-10 text-black dark:bg-gray-950/10 dark:text-gray-300 border-2 border-blue-400/30 dark:border-teal-100">
+                    <div className="space-y-10 ml-1 mr-1 lg:ml-16 lg:mr-16 md:ml-20 md:mr-20 sm:ml-8 sm:mr-8">
+                      <div className="svg-element lg:size-96 justify-self-center sm:size-48">                                                
+                        {svgs[boardIndex]}
+                      </div>
+                      <div ref={refTextTyping} className="text-dynamic-fontsize-2 text-center">
+                        {item.focus.split(" ").map((word, index) => (
+                          <motion.span
+                            key={index}
+                            initial={{ opacity: 0 }}
+                            animate={isVisibleTextTyping ? { opacity: 1 } : { opacity: 0 }}
+                            transition={{ duration: 0.5, delay: isVisibleTextTyping ? index * 0.05 : 0 }}
+                          >
+                            {word}{" "}
+                          </motion.span>
                         ))}
-                    </li>
-                  </ul>
+                      </div>
+                      <motion.div ref={refListDisplay} {...staggeredItem}>
+                        <ul className="space-y-3">
+                          <li className="flex-row space-y-6">
+                            {Object.values(item.focusArea).map((area, index) => (
+                              area?.writeup && (
+                                <div key={index}>
+                                  <motion.dl
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={isVisibleListDisplay ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                    transition={{ duration: 0.5, delay: isVisibleListDisplay ? index * 0.5 : 0 }}
+                                  >
+                                    <div className="ml-4 flex flex-row items-center" >
+                                      <div className="svg-element">
+                                        <TickCircle />
+                                      </div>
+                                      <p className="ml-5 text-dynamic-fontsize-3 text-left">{area.writeup}</p>
+                                    </div>
+                                  </motion.dl>
+                                </div>
+                              )
+                            ))}
+                          </li>
+                        </ul>
+                      </motion.div>
+                    </div>
+                  </div>
               </div>
             </div>
-          </div>
-        </div>
-      ))}
-      &nbsp;
+          </motion.div>
+        );
+      })}
     </div>
-
   );
 };
 

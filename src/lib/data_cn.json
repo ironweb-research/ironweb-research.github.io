@@ -10,6 +10,64 @@
           "viewGithub": "View on GitHub"
         }
       },
+      "background": {
+        "title": {
+          "prefix": "With",
+          "suffix": "Your Future Is Secure"
+        },        
+        "overview": {
+          "founding": "于 2021 年在台湾/香港成立，在创新热情的推动下，我们稳步扩展到东南亚。",
+          "hashtag":"#创新"
+        },
+        "allaboutus":{
+          "research": {
+            "focus": "作为一家以研究为主导的公司，我们致力于提供旨在以下目标的创新解决方案：",
+            "focusArea":{
+              "focus_one":{
+                "writeup":"开发下一代网络安全套件，"},
+              "focus_two":{
+                "writeup":"确保我们的产品和服务始终处于技术前沿，"},
+              "focus_three":{
+                "writeup":"以最具成本效益的方式满足客户需求。"}
+            }
+          },
+          "commitment": {
+            "focus": "无论贵公司规模大小，我们承诺根据您的独特需求定制服务。",
+            "focusArea":{}
+          },
+          "helpyou": {
+            "focus": "无论您是在寻求先进的网络安全措施，还是个性化的安全策略，我们都致力于帮助您:",
+            "focusArea":{
+              "focus_one":{
+                "writeup":"驾驭日益尖端的网络环境并"},
+              "focus_two":{
+                "writeup":"应对越来越复杂及规模不断扩大的网络威胁。"}
+            }          
+          },
+          "onboard": {
+            "focus": "加入我们的旅程，让我们继续突破网络安全的界限，帮助地区内的企业实现其全部潜力。",
+            "focusArea":{}
+          }
+        },
+        "objectives": {
+          "vision": {
+            "title": "愿景",
+            "description": "成为下一代网络安全套件的领导者。"
+          },
+          "expertise": {
+            "title": "我们的专长",
+            "description": "我们的人才是最重要的资产！我们汇聚了经验丰富的专家，拥有跨越信息与通信技术、国防、金融和加密货币行业的广泛研发经验。"
+          },
+          "views": {
+            "title": "我们的观点",
+            "description": "我们对当今互联网安全格局的看法是，它混乱且被垄断，限制了您的选择，只能勉强适应。我们致力于改变这一现状。"
+          },
+          "blog": {
+            "title": "我们的博客",
+            "description": "我们的信念塑造并推动我们的专长、观点和研究。"
+          }
+        }
+      },      
       "story": {
         "title": {
           "prefix": "定制服务:",
@@ -48,64 +106,6 @@
             "summary": "提高效率并节省成本",
             "description": "体验向云的平稳过渡，以确保高可用性并节省成本。 我们制定适合您独特需求的定制迁移计划，确保安全性和业务连续性。"
           }          
-        }
-      },
-      "background": {
-        "title": {
-          "prefix": "With",
-          "suffix": "Your Future Is Secure"
-        },        
-        "overview": {
-          "description": "于 2021 年在台湾/香港成立，在创新热情的推动下，我们稳步扩展到东南亚。",
-          "passion":"#创新"
-        },
-        "items":{
-          "aboutus": {
-            "focus": "作为一家年轻的研究型公司，我们尽我所能，立志：",
-            "focusArea":{
-              "focus_one":{
-                "writeup":"开发下一代网络安全套件，"},
-              "focus_two":{
-                "writeup":"确保我们的解决方案始终处于技术前沿，"},
-              "focus_three":{
-                "writeup":"以最实惠的方式满足客户的需求。"}
-            }
-          },
-          "commitment": {
-            "focus": "应没有两家公司的设立或运作方式是相同的，因此我们致力于定制化。这意味着我们会根据每个客户的独特需求量身定制我们的服务。",
-            "focusArea":{}
-          },
-          "helpyou": {
-            "focus": "无论您是在寻求先进的网络安全措施，还是个性化的安全策略，我们都致力于帮助您:",
-            "focusArea":{
-              "focus_one":{
-                "writeup":"驾驭日益尖端的网络环境并"},
-              "focus_two":{
-                "writeup":"应对越来越复杂及规模不断扩大的网络威胁。"}
-            }          
-          },
-          "onboard": {
-            "focus": "加入我们的旅程，让我们继续突破网络安全的界限，帮助地区内的企业实现其全部潜力。",
-            "focusArea":{}
-          }
-        },
-        "objectives": {
-          "vision": {
-            "title": "愿景",
-            "description": "成为下一代网络安全套件的领导者。"
-          },
-          "expertise": {
-            "title": "我们的专长",
-            "description": "我们的人才是最重要的资产！我们汇聚了经验丰富的专家，拥有跨越信息与通信技术、国防、金融和加密货币行业的广泛研发经验。"
-          },
-          "views": {
-            "title": "我们的观点",
-            "description": "我们对当今互联网安全格局的看法是，它混乱且被垄断，限制了您的选择，只能勉强适应。我们致力于改变这一现状。"
-          },
-          "blog": {
-            "title": "我们的博客",
-            "description": "我们的信念塑造并推动我们的专长、观点和研究。"
-          }
         }
       }
     },
