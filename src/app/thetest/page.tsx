@@ -27,6 +27,15 @@ export default function TestPage() {
 
       <LogoAndBack height = {100} />
       <p>Create demo for sharing.</p>
+
+      <div className="size-5 shrink-0"> 
+          <TickCircle />
+      </div>
+
+      <div className="size-9 shrink-0"> 
+          <TickCircle />
+      </div>
+
       <div> 
           <SizingIcon /> DIV nothing
           <TickCircle />

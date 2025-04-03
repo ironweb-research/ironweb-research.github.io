@@ -87,7 +87,7 @@ const Board: React.FC<BoardProps> = ({ allaboutus }) => {
                                   >
                                     &nbsp;
                                     <div className="flex justify-start" >
-                                      <div className="svg-element size-20 h-[1lh] shrink-0">
+                                      <div className="svg-element size-5 h-[1lh] shrink-0">
                                         <TickCircle />
                                       </div>
                                       <p className="text-dynamic-fontsize-3 text-left">{area.writeup}</p>
