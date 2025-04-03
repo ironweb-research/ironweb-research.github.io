@@ -21,8 +21,8 @@ interface BoardProps {
 }
 
 const Board: React.FC<BoardProps> = ({ allaboutus }) => {
-  const svgs = [<ResearchIcon />, <CommitmentIcon />, <HelpyouIcon />, <OnboardIcon />];
-
+  // const svgs = [<ResearchIcon />, <CommitmentIcon />, <HelpyouIcon />, <OnboardIcon />];
+  const svgs = [ResearchIcon, CommitmentIcon, HelpyouIcon, OnboardIcon];
   return (
     <div>
 
@@ -55,12 +55,10 @@ const Board: React.FC<BoardProps> = ({ allaboutus }) => {
               &nbsp;
               <div className="rounded-xl bg-gray-100 p-2 dark:bg-white/10">
                   <div className="rounded-xl bg-sky-300/10 p-10 text-black dark:bg-gray-950/10 dark:text-gray-300 border-2 border-blue-400/30 dark:border-teal-100">
-                    <div className="space-y-16 ml-1 mr-1 lg:ml-16 lg:mr-16 md:ml-20 md:mr-20 sm:ml-8 sm:mr-8">
-                      <div className="svg-element lg:size-96 justify-self-center sm:size-48">                                                
-                        {svgs[boardIndex]}
-                      </div>
-              &nbsp;
-
+                    <div className="ml-1 mr-1 lg:ml-16 lg:mr-16">
+                      <p className="svg-element justify-self-center">                                                
+                        <SvgComponent height={250} />
+                      </p>
                       <div ref={refTextTyping} className="text-dynamic-fontsize-2 text-center">
                         {item.focus.split(" ").map((word, index) => (
                           <motion.span
@@ -85,12 +83,11 @@ const Board: React.FC<BoardProps> = ({ allaboutus }) => {
                                     animate={isVisibleListDisplay ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ duration: 0.5, delay: isVisibleListDisplay ? index * 0.5 : 0 }}
                                   >
-                                    &nbsp;
                                     <div className="flex justify-start" >
-                                      <div className="svg-element size-5 h-[1lh] shrink-0">
+                                      <div className="svg-element size-5 sm:size-9 h-[1lh] shrink-0">
                                         <TickCircle />
                                       </div>
-                                      <p className="text-dynamic-fontsize-3 text-left">{area.writeup}</p>
+                                      <p className="ml-2 text-dynamic-fontsize-3 text-left">{area.writeup}</p>
                                     </div>
                                   </motion.dl>
                                 </div>

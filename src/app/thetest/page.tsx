@@ -36,6 +36,10 @@ export default function TestPage() {
           <TickCircle />
       </div>
 
+      <div className="size-10 shrink-0"> 
+          <TickCircle />
+      </div>
+
       <div> 
           <SizingIcon /> DIV nothing
           <TickCircle />
@@ -51,9 +55,15 @@ export default function TestPage() {
 
       <div className="size-96 justify-self-center"> 
           <SizingIcon /> DIV 96
+          {/* <TickCircle /> */}
+      </div>
+why 96
+
+
+<div className="size-80 justify-self-center"> 
+          <SizingIcon /> DIV 80
           <TickCircle />
       </div>
-      <br></br>
 
       <div className="size-48 justify-self-center"> 
           <SizingIcon /> DIV 48
@@ -65,6 +75,12 @@ export default function TestPage() {
           <SizingIcon /> DIV 40
           <TickCircle />
       </div>
+
+      <div className="size-36 justify-self-center"> 
+          <SizingIcon /> DIV 36
+          <TickCircle />
+      </div>
+
 <br></br>
       
       </ul>
