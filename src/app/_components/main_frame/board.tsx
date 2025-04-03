@@ -83,6 +83,7 @@ const Board: React.FC<BoardProps> = ({ allaboutus }) => {
                                     animate={isVisibleListDisplay ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                     transition={{ duration: 0.5, delay: isVisibleListDisplay ? index * 0.5 : 0 }}
                                   >
+                                    &nbsp;
                                     <div className="flex justify-start" >
                                       <div className="svg-element size-5 sm:size-9 h-[1lh] shrink-0">
                                         <TickCircle />
