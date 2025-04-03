@@ -12,6 +12,7 @@ import data_cn from '@/lib/data_cn.json';
 import Card from '@/app/_components/main_frame/card';
 import Board from '@/app/_components/main_frame/board';
 import Overview from '@/app/_components/main_frame/overview';
+import Opening from '@/app/_components/main_frame/opening';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 interface BackgroundProps {
@@ -21,8 +22,9 @@ interface BackgroundProps {
 const Background: React.FC<BackgroundProps> = ({ language }) => {
   const { HomePage } = language === 'en' ? data_en: data_cn;
   const { background } = HomePage;
-  const { allaboutus } = background;
+  const { opening } = background;
   const { overview } = background;
+  const { allaboutus } = background;
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useIntersectionObserver(ref, { threshold: 0.1 });
   
@@ -69,26 +71,7 @@ const Background: React.FC<BackgroundProps> = ({ language }) => {
 
   return (
     <div>
-      
-      <motion.div ref={ref1} {...slideIn}>
-        <div className="bg-gray-100 p-2 dark:bg-white/10">
-          <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
-            <div className="space-y-6">
-              <div className="ml-10 mr-10 lg:text-7xl lg:ml-16 lg:mr-16 text-6xl text-center text-pretty">
-                {background.title.prefix}
-              <Image 
-                src={IRONWEB_SOLO_SVG}
-                alt="Logo"
-                width={200}
-                height={200}
-                className="svg-element" // Add "logo-image" class, if need to toggle logo
-              />
-              <p className="svg-element">{background.title.suffix}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      <Opening prefix={opening.prefix} suffix={opening.suffix} />
       &nbsp;
 
       <Overview founding={overview.founding} hashtag={overview.hashtag} />
