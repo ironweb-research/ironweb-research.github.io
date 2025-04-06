@@ -5,26 +5,34 @@ import data_en from '@/lib/data_en.json';
 import data_cn from '@/lib/data_cn.json';
 import Card from '@/app/_components/main_frame/card';
 
-interface BackgroundProps {
-  language: string;
-}
 
-const Services: React.FC<BackgroundProps> = ({ language }) => {
+
+import { useLanguage } from './handle_language/languageContent';
+
+
+
+const Services: React.FC = () => {
+
+
+
+  const { language } = useLanguage();
+
+
+
   const { HomePage } = language === 'en' ? data_en: data_cn;
   const { story } = HomePage;
 
   return (
     <div>
       <h1 className="title">{HomePage.title}</h1>
-      <a className="title">{HomePage.title}</a>
       <div className="title">
         <p className="feature-header">{HomePage.hero.description}</p>
       </div>
       <div className="story">
         <div className="flex flex-col">
-          <h2 className="card-name text-6xl">{story.title.prefix}</h2><br></br>
-          <h3 className="text-4xl">{story.title.suffix}</h3><br></br>
-          <p className="card-description text-3xl text-left">{story.QuestionContact}</p>
+          <h2 className="card-name text-dynamic-fontsize-2">{story.title.prefix}</h2><br></br>
+          <h3 className="text-dynamic-fontsize-3 text-center">{story.title.suffix}</h3><br></br>
+          <p className="card-description text-dynamic-fontsize-3 text-left">{story.QuestionContact}</p>
         </div>
 
         <div className="flex flex-wrap items-start justify-start mt-16 mb-16 md:mb-12">

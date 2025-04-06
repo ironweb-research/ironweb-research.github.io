@@ -3,9 +3,22 @@
 import Container from "@/app/_components/container";
 import { EXAMPLE_PATH } from "@/lib/constants";
 import { usePathname } from 'next/navigation';
+import { useLanguage } from "../handle_language/languageContent";
 
 export function Footer({ className }: { className?: string }) {
   const pathname = usePathname();
+  const { language } = useLanguage();
+
+  const FooterButtons = language === 'en' ? 
+  {
+    "home": "Home",
+    "back": "< < Back",
+    "contact": "Contact"
+  }:{
+      "home": "首页",
+      "back": "< < 返回",
+      "contact": "联系"
+    };
 
   return (
     <footer className={`bg-neutral-200 border-t border-neutral-200 dark:bg-zinc-800 ${className}`}>
@@ -21,7 +34,7 @@ export function Footer({ className }: { className?: string }) {
               href="../"
               className="flex-1 mx-3 bg-black text-white  hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white font-bold py-2 px-6 lg:px-4 duration-200 transition-colors mb-4 lg:mb-0 text-center w-full lg:w-auto"
             >
-              {pathname === '/' ? "Home" : "< < Back"}
+              {pathname === '/' ? `${FooterButtons.home}` : `${FooterButtons.back}`}
             </a>
 
             <a
@@ -29,7 +42,7 @@ export function Footer({ className }: { className?: string }) {
               // className="flex-1 mx-3 font-bold hover:underline text-center w-full lg:w-auto"
               className="flex-1 mx-3 bg-black text-white  hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white font-bold py-2 px-6 lg:px-4 duration-200 transition-colors mb-4 lg:mb-0 text-center w-full lg:w-auto"
             >
-              Contact
+              {FooterButtons.contact}
             </a>
           </div>
         </div>

@@ -1,10 +1,10 @@
 {
     "HomePage": {
-      "title": "Our Services",
+      "title": "我们的服务",
       "hero": {
         "welcome": "Welcome to",
         "title": "Next.js Starter",
-        "description": "Build faster with our powerful Next.js starter! Packed with essential tools like state management, React Query, I18n, CI/CD, and customizable UI components, it's everything you need to kickstart scalable, high-performance projects effortlessly.",
+        "description": "我们提供一切所需，助您轻松启动可扩展、高性能的项目。",
         "buttons": {
           "getStarted": "Get Started",
           "viewGithub": "View on GitHub"

@@ -1,9 +1,7 @@
 'use client'
 
 import React, { useRef } from 'react';
-import Image from "next/image";
 import { motion } from 'framer-motion';
-import { IRONWEB_SOLO_SVG } from "@/lib/constants";
 
 
 import data_en from '@/lib/data_en.json';
@@ -15,11 +13,11 @@ import Overview from '@/app/_components/main_frame/overview';
 import Opening from '@/app/_components/main_frame/opening';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
-interface BackgroundProps {
-  language: string;
-}
+import { useLanguage } from './handle_language/languageContent';
 
-const Background: React.FC<BackgroundProps> = ({ language }) => {
+
+const Background: React.FC = () => {
+  const { language } = useLanguage();
   const { HomePage } = language === 'en' ? data_en: data_cn;
   const { background } = HomePage;
   const { opening } = background;

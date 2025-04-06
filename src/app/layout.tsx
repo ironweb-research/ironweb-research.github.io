@@ -4,6 +4,7 @@ import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
 import { IRONWEB_ONE_SVG } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
+import { LanguageProvider } from "@/app/_components/handle_language/languageContent";
 
 import "@/styles/globals.css";
 
@@ -65,11 +66,13 @@ export default function RootLayout({
       >
         <Alert />
         <ThemeSwitcher />
-          <div className="border-neutral-200 mt-20 min-h-screen background">
+        <LanguageProvider>
+        <div className="border-neutral-200 mt-20 min-h-screen background">
             {children}
           </div>
         <Footer className="fixed bottom-0 left-0 w-full" />
-      </body>
+        </LanguageProvider>
+        </body>
     </html>
   );
 }
