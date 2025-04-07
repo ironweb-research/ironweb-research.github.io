@@ -3,7 +3,7 @@
 import { useState } from 'react';
 // import Image from "next/image";
 import Container from "@/app/_components/container";
-import { SectionSeparator } from "@/app/_components/section-separator";
+import { SectionSeparator } from "@/app/_components/main_frame/section-separator";
 // import { IRONWEB_ONE_SVG } from "@/lib/constants"
 import { ProfileLogoSVG, TickCircle, LogoAndBack, ResearchIcon, CommitmentIcon, HelpyouIcon, OnboardIcon, SizingIcon } from "@/app/_components/main_frame/svg_icon"
 // import VisionPage  from "@/app/_components/vision" 

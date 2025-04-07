@@ -13,7 +13,7 @@ import Overview from '@/app/_components/main_frame/overview';
 import Opening from '@/app/_components/main_frame/opening';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
-import { useLanguage } from './handle_language/languageContent';
+import { useLanguage } from './language_handler/languageContent';
 
 
 const Background: React.FC = () => {

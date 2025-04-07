@@ -7,7 +7,7 @@ import Card from '@/app/_components/main_frame/card';
 
 
 
-import { useLanguage } from './handle_language/languageContent';
+import { useLanguage } from './language_handler/languageContent';
 
 
 

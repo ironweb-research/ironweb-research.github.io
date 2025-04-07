@@ -3,7 +3,7 @@
 import Container from "@/app/_components/container";
 import { EXAMPLE_PATH } from "@/lib/constants";
 import { usePathname } from 'next/navigation';
-import { useLanguage } from "../handle_language/languageContent";
+import { useLanguage } from "../language_handler/languageContent";
 
 export function Footer({ className }: { className?: string }) {
   const pathname = usePathname();

@@ -3,10 +3,10 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import Container from "@/app/_components/container";
-import { PostHeader } from "@/app/_components/post-header";
+import { PostHeader } from "@/app/_components/post_generation/post-header";
 import SubpageHeader from "@/app/_components/main_frame/subpage-header";
-import { SectionSeparator } from "@/app/_components/section-separator";
-import { PostBody } from "@/app/_components/post-body";
+import { SectionSeparator } from "@/app/_components/main_frame/section-separator";
+import { PostBody } from "@/app/_components/post_generation/post-body";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -49,7 +49,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | Welcome to out site.`;
+  const title = `${post.title} | Welcome to our site.`;
 
   return {
     title,

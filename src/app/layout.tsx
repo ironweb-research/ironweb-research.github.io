@@ -4,7 +4,7 @@ import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
 import { IRONWEB_ONE_SVG } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
-import { LanguageProvider } from "@/app/_components/handle_language/languageContent";
+import { LanguageProvider } from "@/app/_components/language_handler/languageContent";
 
 import "@/styles/globals.css";
 
