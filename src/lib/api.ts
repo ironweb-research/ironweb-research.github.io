@@ -17,11 +17,11 @@ function postsDirectory(pathtoMDX: string): string{
   return join(process.cwd(), pathtoMDX);
 }
 
-export function getPostSlugs(pathtoMDX: string) {
+function getMDXFilename(pathtoMDX: string) {
   return fs.readdirSync(postsDirectory(pathtoMDX));
 } // returns filename with ext
 
-export function getPostBySlug(slug: string, pathtoMDX: string){
+export function getPageByFilename(slug: string, pathtoMDX: string){
   const realSlug = slug.replace(/\.mdx$/, "");
   const fullPath = join(postsDirectory(pathtoMDX), `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -35,8 +35,8 @@ export function getPostBySlug(slug: string, pathtoMDX: string){
   return { ...data, slug: realSlug, content } as Post;
 }
 
-export function getAllPosts(pathtoMDX: string): Post[] {
-  const slugs = getPostSlugs(pathtoMDX); // returns list of md/mdx filenames with ext
-  const posts = slugs.map((slug) => getPostBySlug(slug, pathtoMDX));
+export function getAllPages(pathtoMDX: string): Post[] {
+  const slugs = getMDXFilename(pathtoMDX); // returns list of md/mdx filenames with ext
+  const posts = slugs.map((slug) => getPageByFilename(slug, pathtoMDX));
   return posts.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 }

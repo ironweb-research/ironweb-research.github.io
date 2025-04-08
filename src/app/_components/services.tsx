@@ -1,17 +1,17 @@
-'use client'
+// 'use client'
 
-import React from 'react';
+// import React from 'react';
 import data_en from '@/lib/data_en.json';
 import data_cn from '@/lib/data_cn.json';
 import Card from '@/app/_components/main_frame/card';
 
 
 
-import { useLanguage } from './language_handler/languageContent';
+import { useLanguage } from "@/app/_components/language_handler/languageContent";
 
 
 
-const Services: React.FC = () => {
+const Services= () => {
 
 
 

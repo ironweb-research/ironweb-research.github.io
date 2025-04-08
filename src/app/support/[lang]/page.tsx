@@ -1,16 +1,15 @@
-// pull from private repo: [tkokhing/topic_post]
+// Privacy Statement - main
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPages, getPageByFilename } from "@/lib/api";
 import Container from "@/app/_components/container";
-import { PostHeader } from "@/app/_components/post_generation/post-header";
 import SubpageHeader from "@/app/_components/main_frame/subpage-header";
 import { SectionSeparator } from "@/app/_components/main_frame/section-separator";
 import { PostBody } from "@/app/_components/post_generation/post-body";
 
 export default async function Post(props: Params) {
   const params = await props.params;
-  const post = getPageByFilename(params.slug, "_posts");
+  const post = getPageByFilename(params.lang, "_privacy");
   if (!post) {
     return notFound();
   }
@@ -20,14 +19,6 @@ export default async function Post(props: Params) {
         <SubpageHeader />
         <SectionSeparator />
         <article className="mb-32">
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author} 
-            subPath={post.subPath}
-            postStatus={post.postStatus}
-          />
           <PostBody content={post.content} />
         </article>
       </Container>
@@ -37,13 +28,13 @@ export default async function Post(props: Params) {
 
 type Params = {
   params: Promise<{
-    slug: string;
+    lang: string;
   }>;
 };
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
-  const post = getPageByFilename(params.slug, "_posts");
+  const post = getPageByFilename(params.lang, "_privacy");
 
   if (!post) {
     return notFound();
@@ -61,9 +52,9 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPages("_posts");
+  const posts = getAllPages("_privacy");
 
   return posts.map((post) => ({
-    slug: post.slug,
+    lang: post.slug,
   }));
 }

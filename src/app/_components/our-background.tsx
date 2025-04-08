@@ -1,6 +1,6 @@
-'use client'
+// 'use client'
 
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 
 
@@ -13,10 +13,9 @@ import Overview from '@/app/_components/main_frame/overview';
 import Opening from '@/app/_components/main_frame/opening';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
-import { useLanguage } from './language_handler/languageContent';
+import { useLanguage } from "@/app/_components/language_handler/languageContent";
 
-
-const Background: React.FC = () => {
+const Background = () => {
   const { language } = useLanguage();
   const { HomePage } = language === 'en' ? data_en: data_cn;
   const { background } = HomePage;
