@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { MDXProvider } from '@mdx-js/react';
 import LanguageSwitcher from '@/app/_components/language_handler/language-switcher';
 import { useLanguage } from "@/app/_components/language_handler/languageContent";
 import Container from "@/app/_components/container";
