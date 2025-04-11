@@ -1,52 +1,41 @@
-'use client'
+// nEW LanguageProvider
+'use client';
 
-import { createContext, useState, useContext } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+
+type Language = 'en' | 'cn';
 
 interface LanguageContextProps {
-  children: React.ReactNode;
+  language: Language;
+  setLanguage: (lang: Language) => void;
 }
 
-interface LanguageContextValue {
-  language: string;
-  setLanguage: (language: string) => void;
-  error: string | null;
-}
+const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
-const LanguageContext = createContext<LanguageContextValue | null>(null);
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  const [language, setLanguage] = useState<Language>('en');
 
-const LanguageProvider: React.FC<LanguageContextProps> = ({ children }) => {
-  const [language, setLanguage] = useState('en');
-  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    const storedLang = localStorage.getItem('language') as Language;
+    if (storedLang) setLanguage(storedLang);
+  }, []);
 
-  const handleSetLanguage = (newLanguage: string) => {
-    try {
-      if (!['en', 'cn'].includes(newLanguage)) {
-        throw new Error(`Invalid language: ${newLanguage}`);
-      }
-      setLanguage(newLanguage);
-      setError(null);
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
-      } else {
-        setError('An unknown error occurred');
-      }
-    }
+  const changeLanguage = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, error }}>
+    <LanguageContext.Provider value={{ language, setLanguage: changeLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
 };
 
-const useLanguage = () => {
+export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
 };
-
-export { LanguageProvider, useLanguage };

@@ -5,7 +5,7 @@ import Footer from "@/app/_components/main_frame/footer";
 import { IRONWEB_ONE_SVG } from "@/lib/constants";
 import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
 import { LanguageProvider } from "@/app/_components/language_handler/languageContent";
-
+import LanguageSwitcher from "./_components/language_handler/language-switcher";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -64,12 +64,13 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-black dark:text-slate-400")}
       >
+        <LanguageProvider>
         <Alert />
         <ThemeSwitcher />
-        <LanguageProvider>
         <div className="border-neutral-200 mt-20 min-h-screen background">
-            {children}
-          </div>
+        <LanguageSwitcher />
+          {children}
+        </div>
         <Footer className="fixed bottom-0 left-0 w-full" />
         </LanguageProvider>
         </body>

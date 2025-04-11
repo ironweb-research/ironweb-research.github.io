@@ -27,7 +27,7 @@ const PrivacyPage = () => {
           </MDXRender>
           </div>
         </div>
-      <LanguageSwitcher />
+      {/* <LanguageSwitcher /> */}
       </Container>
       </main>
     </div>
