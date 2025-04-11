@@ -1,14 +1,14 @@
 .languageSwitch {
     cursor: pointer;
-    position: fixed;
+    /* position: fixed;
     right: 20px;
-    bottom: 80px;
+    bottom: 120px; */
     zIndex: 1;
     border-radius: 50%;
     background-color: red;
     border: 2px solid black;
-    font-size: 18px;
-    --size: 40px;
+    font-size: 10px;
+    --size: 30px;
     width: var(--size);
     height: var(--size);
     padding: 0;

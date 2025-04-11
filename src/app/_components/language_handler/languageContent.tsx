@@ -8,12 +8,14 @@ type Language = 'en' | 'cn';
 interface LanguageContextProps {
   language: Language;
   setLanguage: (lang: Language) => void;
+  error: string | null;
 }
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('en');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const storedLang = localStorage.getItem('language') as Language;
@@ -21,12 +23,25 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const changeLanguage = (lang: Language) => {
-    setLanguage(lang);
-    localStorage.setItem('language', lang);
+    try {
+      if (!['en', 'cn'].includes(lang)) {
+        throw new Error(`Invalid language: ${lang}`);
+      }
+      
+      setLanguage(lang);
+      localStorage.setItem('language', lang);
+      setError(null);
+    } catch (error){
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Unknown Error Occurred");
+      }
+    }
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: changeLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage: changeLanguage, error }}>
       {children}
     </LanguageContext.Provider>
   );

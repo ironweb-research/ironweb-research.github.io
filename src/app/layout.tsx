@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
 import { IRONWEB_ONE_SVG } from "@/lib/constants";
-import { ThemeSwitcher } from "./_components/main_frame/theme-switcher";
+import { ThemeSwitcher } from "@/app/_components/main_frame/theme-switcher";
 import { LanguageProvider } from "@/app/_components/language_handler/languageContent";
-import LanguageSwitcher from "./_components/language_handler/language-switcher";
+import LanguageSwitcher from "@/app/_components/language_handler/language-switcher";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -68,7 +68,7 @@ export default function RootLayout({
         <Alert />
         <ThemeSwitcher />
         <div className="border-neutral-200 mt-20 min-h-screen background">
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
           {children}
         </div>
         <Footer className="fixed bottom-0 left-0 w-full" />
