@@ -30,10 +30,10 @@ export function Footer({ className }: { className?: string }) {
               Statically Generated with Next.js.
             </a>
           </div>
-          <div className="text-dynamic-fontsize-5 flex lg:flex-row justify-end items-center lg:pl-4 lg:w-1/2 w-full">
+          <div className="text-dynamic-fontsize-4 flex lg:flex-row justify-end items-center lg:pl-4 lg:w-1/2 w-full">
             <a
               href="../"
-              className="flex-1 mx-3 bg-black text-white hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white px-6 lg:px-4 duration-200 transition-colors lg:mb-0 text-center w-full lg:w-auto"
+              className="flex-1 mx-3 bg-black text-white hover:bg-white hover:text-black border rounded-md border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white px-6 lg:px-4 duration-200 transition-colors lg:mb-0 text-center w-full lg:w-auto"
             >
               {pathname === '/' ? `${FooterButtons.home}` : `${FooterButtons.back}`}
             </a>
@@ -41,7 +41,7 @@ export function Footer({ className }: { className?: string }) {
             <a
               href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
               // className="flex-1 mx-3 hover:underline text-center w-full lg:w-auto"
-              className="flex-1 mx-3 bg-black text-white hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white px-6 lg:px-4 duration-200 transition-colors lg:mb-0 text-center w-full lg:w-auto"
+              className="flex-1 mx-3 bg-black text-white hover:bg-white hover:text-black border rounded-md border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white px-6 lg:px-4 duration-200 transition-colors lg:mb-0 text-center w-full lg:w-auto"
             >
               {FooterButtons.contact}
             </a>            

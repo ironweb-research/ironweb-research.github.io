@@ -1,9 +1,9 @@
 .languageSwitch {
     cursor: pointer;
     position: absolute;
-    bottom: 55px;
-    left: calc(var(--spacing) * 1);
-/* left: 20px; */
+    --spacing: 20px;
+    bottom: calc(3vw + var(--spacing));
+    left: calc(var(--spacing) * 100%);
     zIndex: 1;
     border-radius: 50%;
     background-color: red;

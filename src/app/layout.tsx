@@ -70,7 +70,6 @@ export default function RootLayout({
         <div className="border-neutral-200 mt-20 min-h-screen background">
           {children}
         </div>
-        
         <SubFooter className="fixed bottom-0 right-0  w-full" />
         <Footer className="fixed bottom-0 left-0 w-full" />
         </LanguageProvider>
