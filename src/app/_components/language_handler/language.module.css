@@ -1,8 +1,9 @@
 .languageSwitch {
     cursor: pointer;
-    /* position: fixed;
-    right: 20px;
-    bottom: 120px; */
+    position: absolute;
+    bottom: 55px;
+    left: calc(var(--spacing) * 1);
+/* left: 20px; */
     zIndex: 1;
     border-radius: 50%;
     background-color: red;
@@ -13,7 +14,6 @@
     height: var(--size);
     padding: 0;
     transition: all 0.2s ease-in-out 0s !important;
-
   }
 
   [data-mode="system"] .languageSwitch {

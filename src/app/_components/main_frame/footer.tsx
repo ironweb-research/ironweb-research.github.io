@@ -22,31 +22,29 @@ export function Footer({ className }: { className?: string }) {
     };
 
   return (
-    <footer className={`bg-neutral-200 border-t border-neutral-200 dark:bg-zinc-800 ${className}`}>
+    <footer className={`bg-neutral-200 dark:bg-zinc-800 ${className}`}>
       <Container>
-        <div className="py-2 flex flex-col lg:flex-row items-center">
+        <div className="py-0.5 flex flex-col lg:flex-row items-center">
           <div className="hidden lg:block lg:w-1/2">
-            <h3 className="text-2xl lg:text-[1.5rem] font-bold tracking-tighter leading-tight text-center lg:text-left mb-4 lg:mb-0 lg:pr-4">
+            <a className="text-dynamic-fontsize-5 tracking-tighter leading-tight text-center lg:text-left mb-4 lg:mb-0 lg:pr-4">
               Statically Generated with Next.js.
-            </h3>
+            </a>
           </div>
-          <div className="flex lg:flex-row justify-end items-center lg:pl-4 lg:w-1/2 w-full">
+          <div className="text-dynamic-fontsize-5 flex lg:flex-row justify-end items-center lg:pl-4 lg:w-1/2 w-full">
             <a
               href="../"
-              className="flex-1 mx-3 bg-black text-white  hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white font-bold py-2 px-6 lg:px-4 duration-200 transition-colors mb-4 lg:mb-0 text-center w-full lg:w-auto"
+              className="flex-1 mx-3 bg-black text-white hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white px-6 lg:px-4 duration-200 transition-colors lg:mb-0 text-center w-full lg:w-auto"
             >
               {pathname === '/' ? `${FooterButtons.home}` : `${FooterButtons.back}`}
             </a>
 
             <a
               href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              // className="flex-1 mx-3 font-bold hover:underline text-center w-full lg:w-auto"
-              className="flex-1 mx-3 bg-black text-white  hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white font-bold py-2 px-6 lg:px-4 duration-200 transition-colors mb-4 lg:mb-0 text-center w-full lg:w-auto"
+              // className="flex-1 mx-3 hover:underline text-center w-full lg:w-auto"
+              className="flex-1 mx-3 bg-black text-white hover:bg-white hover:text-black border border-black dark:bg-white dark:text-black  dark:hover:bg-black dark:hover:text-white dark:border-white px-6 lg:px-4 duration-200 transition-colors lg:mb-0 text-center w-full lg:w-auto"
             >
               {FooterButtons.contact}
-            </a>
-            <LanguageSwitcher />
-            
+            </a>            
           </div>
         </div>
       </Container>
