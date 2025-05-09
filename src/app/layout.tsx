@@ -1,14 +1,19 @@
+import "@/styles/globals.css";
 import cn from "classnames";
 import { Inter } from "next/font/google";
+import type { Viewport } from 'next'
 import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
 import SubFooter from "@/app/_components/main_frame/sub-footer";
-import { IRONWEB_ONE_SVG } from "@/lib/constants";
 import { ThemeSwitcher } from "@/app/_components/main_frame/theme-switcher";
 import { LanguageProvider } from "@/app/_components/language_handler/languageContent";
-import "@/styles/globals.css";
+import { IRONWEB_ONE_SVG } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  themeColor: 'black',
+}
 
 export const metadata = {
   metadataBase: new URL('http://localhost:3000'),
@@ -19,6 +24,23 @@ export const metadata = {
     description: 'Our Startup aims to integrate blockchain technology to secure networking systems.',
     images: [IRONWEB_ONE_SVG],
   },
+  icons: {
+    icon: [
+      { url: "/assets/logo/favicon_32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/logo/favicon_16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/assets/logo/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/assets/logo/apple-touch-icon.png",
+    shortcut: "/assets/logo/favicon.ico",
+  },
+  manifest: "/assets/logo/site.webmanifest",
+  other: {
+    "msapplication-TileColor": "black",
+    "msapplication-config": "/assets/logo/browserconfig.xml",
+    "mask-icon": "/assets/logo/safari-pinned-tab.svg",
+    "alternate": "/feed.xml",
+  }
+
 }
 
 export default function RootLayout({
@@ -28,39 +50,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/assets/logo/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/assets/logo/favicon_32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/assets/logo/favicon_16x16.png"
-        />
-        <link rel="manifest" href="/assets/logo/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/assets/logo/safari-pinned-tab.svg"
-          color="#000000"
-        />
-        <link rel="icon" href="/assets/logo/favicon.ico" type="image/x-icon"/>
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="msapplication-config"
-          content="/assets/logo/browserconfig.xml"
-        />
-        <meta name="theme-color" content="#000000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      </head>
       <body
         className={cn(inter.className, "dark:bg-black dark:text-slate-400")}
       >
@@ -70,8 +59,8 @@ export default function RootLayout({
         <div className="border-neutral-200 mt-20 min-h-screen background">
           {children}
         </div>
-        <SubFooter className="fixed bottom-0 right-0  w-full" />
-        <Footer className="fixed bottom-0 left-0 w-full" />
+        <SubFooter className="fixed bottom-2 right-0 w-full z-20" />
+        <Footer className="fixed bottom-0 left-0 w-full z-10" />
         </LanguageProvider>
         </body>
     </html>

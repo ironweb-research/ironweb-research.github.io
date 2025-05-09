@@ -21,7 +21,6 @@ interface BoardProps {
 }
 
 const Board: React.FC<BoardProps> = ({ allaboutus }) => {
-  // const svgs = [<ResearchIcon />, <CommitmentIcon />, <HelpyouIcon />, <OnboardIcon />];
   const svgs = [ResearchIcon, CommitmentIcon, HelpyouIcon, OnboardIcon];
   return (
     <div>
@@ -88,7 +87,7 @@ const Board: React.FC<BoardProps> = ({ allaboutus }) => {
                                       <div className="svg-element size-5 sm:size-9 h-[1lh] shrink-0">
                                         <TickCircle />
                                       </div>
-                                      <p className="ml-2 text-dynamic-fontsize-3 text-left">{area.writeup}</p>
+                                      <div className="ml-2 text-dynamic-fontsize-3 text-left">{area.writeup}</div>
                                     </div>
                                   </motion.dl>
                                 </div>

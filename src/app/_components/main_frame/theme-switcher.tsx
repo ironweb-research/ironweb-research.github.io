@@ -72,6 +72,7 @@ const Switch = () => {
     <button
       suppressHydrationWarning
       className={styles.switch}
+      aria-label="Theme_Switch"
       onClick={handleModeSwitch}
     />
   );

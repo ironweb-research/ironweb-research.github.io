@@ -15,6 +15,7 @@ const LanguageSwitcher = () => {
     <button
       onClick={handleLanguageChange}
       className={styles.languageSwitch}
+      aria-label="Language_Switch"
     >
       {language === 'en' ? '中':'EN'}
     </button>
