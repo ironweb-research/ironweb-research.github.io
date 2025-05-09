@@ -86,7 +86,7 @@ const Background = () => {
 
             {Object.values(background.objectives).map((objective, index) => (
               <div key={index} className="w-full">
-                <motion.dl
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isVisible_staggeredList ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ const Background = () => {
                     summary={""} 
                     description={objective.description} 
                   />
-                </motion.dl>
+                </motion.div>
               </div>
             ))}
           

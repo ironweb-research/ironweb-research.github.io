@@ -76,7 +76,7 @@ const Board: React.FC<BoardProps> = ({ allaboutus }) => {
                             {Object.values(item.focusArea).map((area, index) => (
                               area?.writeup && (
                                 <div key={index}>
-                                  <motion.dl
+                                  <motion.div
                                     key={index}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isVisibleListDisplay ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ const Board: React.FC<BoardProps> = ({ allaboutus }) => {
                                       </div>
                                       <div className="ml-2 text-dynamic-fontsize-3 text-left">{area.writeup}</div>
                                     </div>
-                                  </motion.dl>
+                                  </motion.div>
                                 </div>
                               )
                             ))}
