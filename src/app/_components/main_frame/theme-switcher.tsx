@@ -1,96 +1,76 @@
-"use client";
+'use client';
 
-import styles from "./switch.module.css";
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useState} from 'react';
+import styles from './switch.module.css';
 
-declare global {
-  var updateDOM: () => void;
-}
+const MODES = ['system', 'dark', 'light'] as const;
+const STORAGE_KEY = 'this-theme';
+type AppThemeMode = typeof MODES[number];
 
-type ColorSchemePreference = "dark" | "light" | "system";
+const applyThemeToDOM = (mode: AppThemeMode) => {
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const resolvedMode = mode === 'system' ? (systemPrefersDark ? 'dark' : 'light') : mode;
+  const classList = document.documentElement.classList;
 
-const STORAGE_KEY = "this-theme";
-const modes: ColorSchemePreference[] = ["dark", "light", "system"];
-
-export const NoFOUCScript = (storageKey: string) => {
-  const [DARK, LIGHT, SYSTEM] = ["dark", "light", "system"];
-  const modifyTransition = () => {
-    const css = document.createElement("style");
-    css.textContent = "*,*:after,*:before{transition:none !important;}";
-    document.head.appendChild(css);
-
-    return () => {
-      getComputedStyle(document.body);
-      setTimeout(() => document.head.removeChild(css), 1);
-    };
-  };
-
-  const media = matchMedia(`(prefers-color-scheme: ${DARK})`);
-
-  window.updateDOM = () => {
-    const restoreTransitions = modifyTransition();
-    const mode = localStorage.getItem(storageKey) ?? DARK; // Force DARK mode initially
-    const systemMode = media.matches ? DARK : LIGHT;
-    const resolvedMode = mode === SYSTEM ? systemMode : mode;
-    const classList = document.documentElement.classList;
-    if (resolvedMode === DARK) classList.add(DARK);
-    else classList.remove(DARK);
-    document.documentElement.setAttribute("data-mode", mode);
-    restoreTransitions();
-  };
-  window.updateDOM();
-  media.addEventListener("change", window.updateDOM);
+  classList.toggle('dark', resolvedMode === 'dark');
+  document.documentElement.setAttribute('data-mode', mode);
 };
 
-let updateDOM: () => void;
+// Run script before hydration to avoid FOUC
+const InlineThemeScript = memo(() => {
+  const scriptContent = `
+    (() => {
+      try {
+        const STORAGE_KEY = '${STORAGE_KEY}';
+        const mode = localStorage.getItem(STORAGE_KEY) || 'system';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const resolved = mode === 'system' ? (prefersDark ? 'dark' : 'light') : mode;
 
-const Switch = () => {
-  const [mode, setMode] = useState<ColorSchemePreference>(
-    () =>
-      ((typeof localStorage !== "undefined" &&
-        localStorage.getItem(STORAGE_KEY)) ??
-        "dark") as ColorSchemePreference, // Start in DARK mode
+        document.documentElement.classList.toggle('dark', resolved === 'dark');
+        document.documentElement.setAttribute('data-mode', mode);
+      } catch (e) {
+        console.error('Theme script error', e);
+      }
+    })();
+  `;
+
+  return (
+    <script
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: scriptContent }}
+    />
   );
+});
 
-  useEffect(() => {
-    updateDOM = window.updateDOM;
-    addEventListener("storage", (e: StorageEvent): void => {
-      e.key === STORAGE_KEY && setMode(e.newValue as ColorSchemePreference);
-    });
-  }, []);
+const ThemeSwitchButton = () => {
+  const [mode, setMode] = useState<AppThemeMode>(() => {
+    if (typeof window === 'undefined') return 'system';
+    return (localStorage.getItem(STORAGE_KEY) as AppThemeMode) ?? 'system';
+  });
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, mode);
-    updateDOM();
+    applyThemeToDOM(mode);
   }, [mode]);
 
-  const handleModeSwitch = () => {
-    const index = modes.indexOf(mode);
-    setMode(modes[(index + 1) % modes.length]);
+  const cycleTheme = () => {
+    const nextIndex = (MODES.indexOf(mode) + 1) % MODES.length;
+    setMode(MODES[nextIndex]);
   };
+
   return (
     <button
       suppressHydrationWarning
+      onClick={cycleTheme}
+      aria-label="Switch Themes"
       className={styles.switch}
-      aria-label="Theme_Switch"
-      onClick={handleModeSwitch}
     />
   );
 };
 
-const Script = memo(() => (
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `(${NoFOUCScript.toString()})('${STORAGE_KEY}')`,
-    }}
-  />
-));
-
-export const ThemeSwitcher = () => {
-  return (
-    <>
-      <Script />
-      <Switch />
-    </>
-  );
-};
+export const ThemeSwitcher = () => (
+  <>
+    <InlineThemeScript />
+    <ThemeSwitchButton />
+  </>
+);
