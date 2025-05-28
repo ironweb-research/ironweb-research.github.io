@@ -5,20 +5,11 @@ import data_en from '@/lib/data_en.json';
 import data_cn from '@/lib/data_cn.json';
 import Card from '@/app/_components/main_frame/card';
 
-
-
 import { useLanguage } from "@/app/_components/language_handler/languageContent";
-
-
 
 const Services= () => {
 
-
-
   const { language } = useLanguage();
-
-
-
   const { HomePage } = language === 'en' ? data_en: data_cn;
   const { story } = HomePage;
 

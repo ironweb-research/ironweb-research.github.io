@@ -4,7 +4,7 @@ import Container from "@/app/_components/container";
 import { useLanguage } from "@/app/_components/language_handler/languageContent";
 import LanguageSwitcher from "@/app/_components/language_handler/language-switcher";
 
-export function SubFooter({ className }: { className?: string }) {
+export function LangSwitchBanner({ className }: { className?: string }) {
   const { language } = useLanguage();
 
   return (
@@ -16,4 +16,4 @@ export function SubFooter({ className }: { className?: string }) {
   );
 }
 
-export default SubFooter;
+export default LangSwitchBanner;

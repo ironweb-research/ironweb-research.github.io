@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import type { Viewport } from 'next'
 import Alert from "@/app/_components/main_frame/alert";
 import Footer from "@/app/_components/main_frame/footer";
-import SubFooter from "@/app/_components/main_frame/sub-footer";
+import LangSwitchBanner from "@/app/_components/language_handler/language-switch-banner";
 import { ThemeSwitcher } from "@/app/_components/main_frame/theme-switcher";
 import { LanguageProvider } from "@/app/_components/language_handler/languageContent";
 import { IRONWEB_ONE_SVG } from "@/lib/constants";
@@ -59,7 +59,7 @@ export default function RootLayout({
         <div className="border-neutral-200 mt-20 min-h-screen background">
           {children}
         </div>
-        <SubFooter className="fixed bottom-2 right-0 w-full z-20" />
+        <LangSwitchBanner className="fixed bottom-2 right-0 w-full z-20" />
         <Footer className="fixed bottom-0 left-0 w-full z-10" />
         </LanguageProvider>
         </body>

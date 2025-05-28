@@ -45,8 +45,6 @@ const Background = () => {
     animate: isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 },
     transition: { duration: 1 }
   };
-
-
   
   const slideIn = {
     initial: { opacity: 0, y: 100 },
@@ -82,8 +80,6 @@ const Background = () => {
       <div className="bg-red-800 p-2 dark:bg-white/10">
         <div className="rounded-xl bg-white p-10 text-gray-700 dark:bg-gray-950 dark:text-gray-300">
           <div className="flex flex-wrap justify-start mt-16 mb-16 md:mb-12">
-
-
             {Object.values(background.objectives).map((objective, index) => (
               <div key={index} className="w-full">
                 <motion.div
@@ -99,17 +95,11 @@ const Background = () => {
                   />
                 </motion.div>
               </div>
-            ))}
-          
-
-
-          
+            ))}         
           </div>
         </div>
       </div>
-
       </motion.div>
-
     </div>
   );
 };
