@@ -4,7 +4,6 @@ import Container from "@/app/_components/container";
 import { EXAMPLE_PATH } from "@/lib/constants";
 import { usePathname } from 'next/navigation';
 import { useLanguage } from "@/app/_components/language_handler/languageContent";
-import LanguageSwitcher from "@/app/_components/language_handler/language-switcher";
 
 export function Footer({ className }: { className?: string }) {
   const pathname = usePathname();

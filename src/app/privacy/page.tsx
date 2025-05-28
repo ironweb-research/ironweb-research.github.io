@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import LanguageSwitcher from '@/app/_components/language_handler/language-switcher';
 import { useLanguage } from "@/app/_components/language_handler/languageContent";
 import Container from "@/app/_components/container";
 import MDXRender from '@/app/_components/post_generation/MDXRender';
@@ -27,7 +26,6 @@ const PrivacyPage = () => {
           </MDXRender>
           </div>
         </div>
-      {/* <LanguageSwitcher /> */}
       </Container>
       </main>
     </div>

@@ -1,9 +1,6 @@
-// LanguageSwitcher.tsx
 'use client';
 import styles from './language.module.css';
 import { useLanguage } from './languageContent';
-// new language_switcher
-
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();

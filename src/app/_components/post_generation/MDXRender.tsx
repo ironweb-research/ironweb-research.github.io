@@ -1,5 +1,3 @@
-// src/app/_components/MDXRender.tsx
-
 'use client';
 
 import { MDXProvider } from '@mdx-js/react';
@@ -12,7 +10,7 @@ interface MDXRenderProps {
 const MDXRender = ({ children }: MDXRenderProps) => {
   return (
     <MDXProvider>
-          {children}
+      {children}
     </MDXProvider>
   );
 };
